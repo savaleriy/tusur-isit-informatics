@@ -5,7 +5,7 @@
 
 В книге математик [Дьёрдь Пойа](https://ru.wikipedia.org/wiki/Пойа,_Дьёрдь) [Как Решать Задачу](https://www.ozon.ru/product/kak-reshat-zadachu-metodicheskoe-posobie-schule-des-denkens-vom-lsen-mathematischer-probleme-1189197167/?_bctx=CAUQnNhE&at=6WtZjYvxNc6OgNmlIQr7POph2Awj0AfyDDl4cEExLQ8) предлагает следующую таблицу для решения задач:
 
-![image](how_to_solve.png)
+![image](images/how_to_solve.png)
 
 Вся соль не в том, чтобы слепо следовать инструкции, а в том, чтобы _изобрести решение самостоятельно_. Вот как я вижу эту таблицу:
 
