@@ -1,4 +1,4 @@
-
+Co
 # Обязательные задания 
 
 
@@ -254,8 +254,8 @@
 
 int* race(int v1, int v2, int g) 
 {
-   int* time = malloc(3 * sizeof(int));
-   return time;
+   // ВАШЕ РЕШЕНИЕ ТУТ
+   return result;
 }
 
 
@@ -313,50 +313,123 @@ int main() {
 
 
 ```c
-	do_test(
-		"",
-		""
-	);
-	do_test(
-		"How can mirrors be real if our eyes aren't real",
-		"How Can Mirrors Be Real If Our Eyes Aren't Real"
-	);
-	do_test(
-		"All the rules in this world were made by someone no smarter than you. So make your own.",
-		"All The Rules In This World Were Made By Someone No Smarter Than You. So Make Your Own."
-	);
-	do_test(
-		"School is the tool to brainwash the youth.",
-		"School Is The Tool To Brainwash The Youth."
-	);
-	do_test(
-		"If everybody in the world dropped out of school we would have a much more intelligent society.",
-		"If Everybody In The World Dropped Out Of School We Would Have A Much More Intelligent Society."
-	);
-	do_test(
-		"Dying is mainstream",
-		"Dying Is Mainstream"
-	);
-	do_test(
-		"If there is bread winners, there is bread losers. But you can't toast what isn't real.",
-		"If There Is Bread Winners, There Is Bread Losers. But You Can't Toast What Isn't Real."
-	);
-	do_test(
-		"When you Live your Whole life In a Prison freedom Can be So dull.",
-		"When You Live Your Whole Life In A Prison Freedom Can Be So Dull."
-	);
-	do_test(
-		"The moment that truth is organized it becomes a lie.",
-		"The Moment That Truth Is Organized It Becomes A Lie."
-	);
-	do_test(
-		"Pay attention to the numbers in your life they are vastly important.",
-		"Pay Attention To The Numbers In Your Life They Are Vastly Important."
-	);
-	do_test(
-		"If a book store never runs out of a certain book, dose that mean that nobody reads it, or everybody reads it",
-		"If A Book Store Never Runs Out Of A Certain Book, Dose That Mean That Nobody Reads It, Or Everybody Reads It"
-	);
+def to_jaden_case(string):
+	# ВАШЕ РЕШЕНИЕ ТУТ
+    return result
+
+def test():
+    test_cases = [
+        [
+            "most trees are blue",
+            "Most Trees Are Blue"
+        ],
+        [
+            "How can mirrors be real if our eyes aren't real",
+            "How Can Mirrors Be Real If Our Eyes Aren't Real"
+        ],
+        [
+            "All the rules in this world were made by someone no smarter than you. So make your own.",
+            "All The Rules In This World Were Made By Someone No Smarter Than You. So Make Your Own."
+        ],
+        [
+            "School is the tool to brainwash the youth.",
+            "School Is The Tool To Brainwash The Youth."
+        ],
+        [
+            "If newborn babies could speak they would be the most intelligent beings on planet Earth.",
+            "If Newborn Babies Could Speak They Would Be The Most Intelligent Beings On Planet Earth."
+        ],
+        [
+            "If everybody in the world dropped out of school we would have a much more intelligent society.",
+            "If Everybody In The World Dropped Out Of School We Would Have A Much More Intelligent Society."
+        ],
+        [
+            "Trees are never sad look at them every once in awhile they're quite beautiful.",
+            "Trees Are Never Sad Look At Them Every Once In Awhile They're Quite Beautiful."
+        ],
+        [
+            "When I die. then you will realize",
+            "When I Die. Then You Will Realize"
+        ],
+        [
+            "I should just stop tweeting, the human conciousness must raise before I speak my juvenile philosophy.",
+            "I Should Just Stop Tweeting, The Human Conciousness Must Raise Before I Speak My Juvenile Philosophy."
+        ],
+        [
+            "Jonah Hill is a genius",
+            "Jonah Hill Is A Genius"
+        ],
+        [
+            "Dying is mainstream",
+            "Dying Is Mainstream"
+        ],
+        [
+            "If there is bread winners, there is bread losers. But you can't toast what isn't real.",
+            "If There Is Bread Winners, There Is Bread Losers. But You Can't Toast What Isn't Real."
+        ],
+        [
+            "You Can Discover Everything You Need to Know About Everything by Looking at your Hands",
+            "You Can Discover Everything You Need To Know About Everything By Looking At Your Hands"
+        ],
+        [
+            "Fixed habits to respond to authority takes 12 years. Have fun",
+            "Fixed Habits To Respond To Authority Takes 12 Years. Have Fun"
+        ],
+        [
+            "When you Live your Whole life In a Prison freedom Can be So dull.",
+            "When You Live Your Whole Life In A Prison Freedom Can Be So Dull."
+        ],
+        [
+            "Young Jaden: Here's the deal for every time out you give me, you'll give me 15 dollars for therapy when I get older.",
+            "Young Jaden: Here's The Deal For Every Time Out You Give Me, You'll Give Me 15 Dollars For Therapy When I Get Older."
+        ],
+        [
+            "The moment that truth is organized it becomes a lie.",
+            "The Moment That Truth Is Organized It Becomes A Lie."
+        ],
+        [
+            "Three men, six options, don't choose.",
+            "Three Men, Six Options, Don't Choose."
+        ],
+        [
+            "Water in the eyes and alcohol in the eyes are pretty much the same I know This from first Hand Experience.",
+            "Water In The Eyes And Alcohol In The Eyes Are Pretty Much The Same I Know This From First Hand Experience."
+        ],
+        [
+            "Pay attention to the numbers in your life they are vastly important.",
+            "Pay Attention To The Numbers In Your Life They Are Vastly Important."
+        ],
+        [
+            "We need to stop teaching the Youth about the Past and encourage them to change the Future.",
+            "We Need To Stop Teaching The Youth About The Past And Encourage Them To Change The Future."
+        ],
+        [
+            "If a book store never runs out of a certain book, dose that mean that nobody reads it, or everybody reads it",
+            "If A Book Store Never Runs Out Of A Certain Book, Dose That Mean That Nobody Reads It, Or Everybody Reads It"
+        ],
+        [
+            "People tell me to smile I tell them the lack of emotion in my face doesn't mean I'm unhappy",
+            "People Tell Me To Smile I Tell Them The Lack Of Emotion In My Face Doesn't Mean I'm Unhappy"
+        ],
+        [
+            "I watch Twilight every night",
+            "I Watch Twilight Every Night"
+        ]
+    ]
+    
+    for i, (input_str, expected) in enumerate(test_cases, 1):
+        try:
+            result = to_jaden_case(input_str)
+            if result != expected:
+                exit(i)  # Возвращаем номер проваленного теста
+        except Exception:
+            exit(i)  # Если возникла ошибка - тоже провал
+    
+    return True  # Все тесты пройдены
+
+if __name__ == "__main__":
+    test()
+    exit(0)  # Все тесты пройдены успешно
 ```
 
 
@@ -390,8 +463,7 @@ int main() {
 #include <limits.h>
 
 unsigned long long square_digits(unsigned n) {
-    unsigned long long result = 0;
-    //
+    // ВАШЕ РЕШЕНИЕ ТУТ!
     return result;
 }
 
@@ -436,9 +508,10 @@ int main() {
 Числа меньше 10, кратные 3 или 5: `3, 5, 6, 9`.
 Их сумма: `3 + 5 + 6 + 9 = 23`.
 
-```
-def mult_3_or_5(number):   
-    return
+```python
+def mult_3_or_5(number):
+	# ВАШЕ РЕШЕНИЕ ТУТ   
+    return result
 
 def test():
     test_cases = [
@@ -495,7 +568,8 @@ if __name__ == "__main__":
 #include <stdlib.h>
 
 int *array_diff(const int *arr1, size_t n1, const int *arr2, size_t n2, size_t *z) {
-    return 0;
+	// ВАШЕ РЕШЕНИЕ ТУТ
+    return result;
 }
 
 static int arrays_equal(const int *a, const int *b, size_t n) {
@@ -582,6 +656,7 @@ $$F_n = F_{n-1} + F_{n-2}$$
 
 ```python
 def evenFibSum(limit):
+	# ВАШЕ РЕШЕНИЕ ТУТ
 	return result 
 
 def test():
@@ -608,3 +683,169 @@ if __name__ == "__main__":
     test()
     exit(0)
 ```
+
+
+
+
+# Бонус
+## 10. Разобрать Числа из Букв (Python)
+
+> `words_to_number.{c|py}`
+
+У нас есть строки — слова, которые люди используют для обозначения чисел, — и нам нужно превратить их обратно в обычные, удобные для машины цифры. 
+
+*   `"one"` -> `1` (Ну, это просто, правда?)
+*   `"twenty"` -> `20` (Тоже ничего сложного)
+*   `"two hundred forty-six"` -> `246` (Вот здесь уже начинается веселье! Нужно учесть множители и сложить всё вместе)
+*   `"seven hundred eighty-three thousand nine hundred and nineteen"` -> `783919` (Ого! Целый миллион! Ну, почти.)
+
+**Несколько важных заметок на полях:**
+
+1.  Самый маленький числословный ребёнок — это `"zero"`. Да-да, ноль тоже считается!
+2.  А самый большой, самый упитанный наш друг — это `"one million"`. Больше миллиона можно не приносить, наш парсер ещё не вырос.
+
+3.  Словечко `"and"` — оно, понимаете ли, капризное. Иногда оно в предложении есть, а иногда его нет. Как шаловливый электрон! Наш алгоритм должен быть настолько ловким, чтобы игнорировать эту помеху. 
+
+4.  И главное — все строки на входе уже правильные. Не нужно тратить силы на проверку, что «двадцать пятдесят» — это ерунда. 
+
+Представьте, что слова вроде `"hundred"`, `"thousand"`, `"million"` — это математические операторы, как `+` или `*`. Они умножают всё, что было до них, на свой коэффициент.
+
+Вот смотрите:
+`"two hundred"` — это ведь `2 * 100`.
+`"forty-six"` — это `40 + 6`.
+
+А теперь сложный пример! Давайте разберём его на части, как я разбираю двигатель:
+
+`"seven hundred eighty-three thousand nine hundred and nineteen"`
+
+1.  **"seven hundred"**: Видим оператор `hundred` -> `7 * 100 = 700`
+2.  **"eighty-three"**: Это просто число, которое мы позже прибавим -> `80 + 3 = 83`
+3.  ️Ага! **"thousand"**! Это наш *большой* оператор. Он значит: «Всё, что я набрал до этого момента, нужно умножить на 1000 и отложить в большую копилку». Итак: `(700 + 83) * 1000 = 783 * 1000 = 783,000`
+4.  Дальше пошли разряды поменьше. **"nine hundred"** -> `9 * 100 = 900`
+5.  И наконец, **"nineteen"** -> `19`
+6.  Теперь всё это добро складываем: `783,000 + 900 + 19 = 783,919`
+
+
+```python
+def words_to_number(words):
+    # ВАШЕ РЕШЕНИЕ
+    return result
+
+def test():
+    test_cases = [
+	     ["one", 1],
+	     ["twenty", 20],
+	    ["two hundred and forty-six", 246],
+    ]
+    
+    for i, (input_str, expected) in enumerate(test_cases, 1):
+        try:
+            result = to_jaden_case(input_str)
+            if result != expected:
+                exit(i)  # Возвращаем номер проваленного теста
+        except Exception:
+            exit(i)  # Если возникла ошибка - тоже провал
+    
+    return True  # Все тесты пройдены
+
+if __name__ == "__main__":
+    test()
+    exit(0)  # Все тесты пройдены успешно
+```
+
+
+
+## 10. Функция `accum` (C)
+
+> `accum.c`
+
+Смотрите, у нас есть функция. Назовём её `accum`. Она принимает одну строку — какие-то буквы. А на выходе должна получиться другая строка, очень специфическая.
+
+**Примеры, чтобы не запутаться:**
+
+*   `accum("abcd")` превращается в `"A-Bb-Ccc-Dddd"`
+*   `accum("RqaEzty")` разворачивается в `"R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"`
+*   `accum("cwAt")` становится `"C-Ww-Aaa-Tttt"`
+
+Видите закономерность? Каждая буква в новой строке повторяется столько раз, каким по счёту она идёт в исходном слове. Первая буква — один раз (но с большой буквы!), вторая — два раза, третья — три, и так далее. И всё это великолепие соединено дефисами.
+
+Для буквы с индексом `i` нам нужно повторить её `i+1` раз.
+
+Давайте проиллюстрируем на примере `"abcd"`:
+
+*   Индекс 0 (буква 'a'): `'A'` (верхний регистр) + `''` (повторить нижний регистр 0 раз) -> `"A"`
+*   Индекс 1 (буква 'b'): `'B'` + `'b'` (повторить 1 раз) -> `"Bb"`
+*   Индекс 2 (буква 'c'): `'C'` + `'cc'` (повторить 2 раза) -> `"Ccc"`
+*   Индекс 3 (буква 'd'): `'D'` + `'ddd'` (повторить 3 раза) -> `"Dddd"`
+
+А теперь — самое интересное! — соединяем всё это через дефис: `"A" + "-" + "Bb" + "-" + "Ccc" + "-" + "Dddd"`
+
+Вот вам и ответ: `"A-Bb-Ccc-Dddd"`.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <assert.h>
+
+char *accum(const char *source) {
+	// Ваше решение
+	return result;
+}
+
+// Helper function for assertion (since standard assert doesn't take a format string)
+void assert_strings_equal(const char *expected, const char *actual, const char *msg) {
+    if (strcmp(expected, actual) != 0) {
+        fprintf(stderr, "Assertion failed: %s\n", msg);
+        fprintf(stderr, "Expected: \"%s\"\n", expected);
+        fprintf(stderr, "Actual:   \"%s\"\n", actual);
+        abort();
+    }
+}
+
+int main() {
+    {
+        const char *source = "ZpglnRxqenU";
+        const char *expected = "Z-Pp-Ggg-Llll-Nnnnn-Rrrrrr-Xxxxxxx-Qqqqqqqq-Eeeeeeeee-Nnnnnnnnnn-Uuuuuuuuuuu";
+        char *actual = accum(source);
+        assert_strings_equal(expected, actual, "Test 1");
+        free(actual);
+    }
+
+    {
+        const char *source = "NyffsGeyylB";
+        const char *expected = "N-Yy-Fff-Ffff-Sssss-Gggggg-Eeeeeee-Yyyyyyyy-Yyyyyyyyy-Llllllllll-Bbbbbbbbbbb";
+        char *actual = accum(source);
+        assert_strings_equal(expected, actual, "Test 2");
+        free(actual);
+    }
+
+    {
+        const char *source = "MjtkuBovqrU";
+        const char *expected = "M-Jj-Ttt-Kkkk-Uuuuu-Bbbbbb-Ooooooo-Vvvvvvvv-Qqqqqqqqq-Rrrrrrrrrr-Uuuuuuuuuuu";
+        char *actual = accum(source);
+        assert_strings_equal(expected, actual, "Test 3");
+        free(actual);
+    }
+
+    {
+        const char *source = "EvidjUnokmM";
+        const char *expected = "E-Vv-Iii-Dddd-Jjjjj-Uuuuuu-Nnnnnnn-Oooooooo-Kkkkkkkkk-Mmmmmmmmmm-Mmmmmmmmmmm";
+        char *actual = accum(source);
+        assert_strings_equal(expected, actual, "Test 4");
+        free(actual);
+    }
+
+    {
+        const char *source = "HbideVbxncC";
+        const char *expected = "H-Bb-Iii-Dddd-Eeeee-Vvvvvv-Bbbbbbb-Xxxxxxxx-Nnnnnnnnn-Cccccccccc-Ccccccccccc";
+        char *actual = accum(source);
+        assert_strings_equal(expected, actual, "Test 5");
+        free(actual);
+    }
+
+    return 0;
+}
+```
+
