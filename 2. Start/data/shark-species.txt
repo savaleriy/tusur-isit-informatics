@@ -1,0 +1,653 @@
+Carcharhiniformes
+    Carcharhinidae
+        Carcharhinus
+            Carcharhinus acronotus : Blacknose shark
+            Carcharhinus albimarginatus : Silvertip shark
+            Carcharhinus altimus : Bignose shark
+            Carcharhinus amblyrhynchoides : Graceful shark
+            Carcharhinus amblyrhynchos : Grey reef shark
+            Carcharhinus amboinensis : Pigeye shark
+            Carcharhinus borneensis : Borneo shark
+            Carcharhinus brachyurus : Copper shark
+            Carcharhinus brevipinna : Spinner shark
+            Carcharhinus cautus : Nervous shark
+            Carcharhinus coatesi : Coates's shark
+            Carcharhinus dussumieri : Whitecheek shark
+            Carcharhinus falciformis : Silky shark
+            Carcharhinus fitzroyensis : Creek whaler
+            Carcharhinus galapagensis : Galapagos shark
+            Carcharhinus hemiodon : Pondicherry shark
+            Carcharhinus humani : Human's whaler shark
+            Carcharhinus isodon : Finetooth shark
+            Carcharhinus leiodon : Smoothtooth blacktip shark
+            Carcharhinus leucas : Bull shark
+            Carcharhinus limbatus : Blacktip shark
+            Carcharhinus longimanus : Oceanic whitetip shark
+            Carcharhinus macloti : Hardnose shark
+            Carcharhinus melanopterus : Blacktip reef shark
+            Carcharhinus obscurus : Dusky shark
+            Carcharhinus perezi : Caribbean reef shark
+            Carcharhinus plumbeus : Sandbar shark
+            Carcharhinus porosus : Smalltail shark
+            Carcharhinus sealei : Blackspot shark
+            Carcharhinus signatus : Night shark
+            Carcharhinus sorrah : Spot-tail shark
+            Carcharhinus tilstoni : Australian blacktip shark
+            Carcharhinus tjutjot : Indonesian whaler shark
+        Galeocerdo
+            Galeocerdo cuvier : Tiger shark
+        Glyphis
+            Glyphis fowlerae : Borneo river shark
+            Glyphis gangeticus : Ganges shark
+            Glyphis garricki : Northern river shark
+            Glyphis glyphis : Speartooth shark
+            Glyphis siamensis : Irrawaddy river shark
+        Isogomphodon
+            Isogomphodon oxyrhynchus : Daggernose shark
+        Lamiopsis
+            Lamiopsis temminckii : Broadfin shark
+            Lamiopsis tephrodes : Borneo broadfin shark
+        Loxodon
+            Loxodon macrorhinus : Sliteye shark
+        Nasolamia
+            Nasolamia velox : Whitenose shark
+        Negaprion
+            Negaprion acutidens : Sicklefin lemon shark
+            Negaprion brevirostris : Lemon shark
+        Prionace
+            Prionace glauca : Blue shark
+        Rhizoprionodon
+            Rhizoprionodon acutus : Milk shark
+            Rhizoprionodon lalandii : Brazilian sharpnose shark
+            Rhizoprionodon longurio : Pacific sharpnose shark
+            Rhizoprionodon oligolinx : Grey sharpnose shark
+            Rhizoprionodon porosus : Caribbean sharpnose shark
+            Rhizoprionodon taylori : Australian sharpnose shark
+            Rhizoprionodon terraenovae : Atlantic sharpnose shark
+        Scoliodon
+            Scoliodon laticaudus : Spadenose shark
+            Scoliodon macrorhynchos : Pacific spadenose shark
+        Triaenodon
+            Triaenodon obesus : Whitetip reef shark
+    Hemigaleidae
+        Chaenogaleus
+            Chaenogaleus macrostoma : Hooktooth shark
+        Hemigaleus
+            Hemigaleus australiensis : Australian weasel shark
+            Hemigaleus microstoma : Sicklefin weasel shark
+        Hemipristis
+            Hemipristis elongata : Snaggletooth shark
+        Paragaleus
+            Paragaleus leucolomatus : Whitetip weasel shark
+            Paragaleus pectoralis : Atlantic weasel shark
+            Paragaleus randalli : Slender weasel shark
+            Paragaleus tengi : Straight-tooth weasel shark
+    Leptochariidae
+        Leptocharias
+            Leptocharias smithii : Barbeled houndshark
+    Proscylliidae
+        Ctenacis
+            Ctenacis fehlmanni : Harlequin catshark
+        Eridacnis
+            Eridacnis barbouri : Cuban ribbontail catshark
+            Eridacnis radcliffei : Pygmy ribbontail catshark
+            Eridacnis sinuans : African ribbontail catshark
+        Proscyllium
+            Proscyllium habereri : Graceful catshark
+            Proscyllium magnificum : Magnificent catshark
+    Pseudotriakidae
+        Gollum
+            Gollum attenuatus : [No common name]
+            Gollum suluensis : [No common name]
+        Planonasus
+            Planonasus parini : Dwarf false catshark
+        Pseudotriakis
+            Pseudotriakis microdon : False catshark
+    Scyliorhinidae
+        Apristurus
+            Apristurus albisoma : White-bodied catshark
+            Apristurus ampliceps : Roughskin catshark
+            Apristurus aphyodes : White ghost catshark
+            Apristurus australis : Pinocchio catshark
+            Apristurus brunneus : Brown catshark
+            Apristurus bucephalus : Bighead catshark
+            Apristurus canutus : Hoary catshark
+            Apristurus exsanguis : Flaccid catshark
+            Apristurus fedorovi : Fedorov's catshark
+            Apristurus garricki : Garrick's catshark
+            Apristurus gibbosus : Humpback catshark
+            Apristurus herklotsi : Longfin catshark
+            Apristurus indicus : Smallbelly catshark
+            Apristurus internatus : Shortnose demon catshark
+            Apristurus investigatoris : Broadnose catshark
+            Apristurus japonicus : Japanese catshark
+            Apristurus kampae : Longnose catshark
+            Apristurus laurussonii : Iceland catshark
+            Apristurus longicephalus : Longhead catshark
+            Apristurus macrorhynchus : Flathead catshark
+            Apristurus macrostomus : Broadmouth catshark
+            Apristurus manis : Ghost catshark
+            Apristurus melanoasper : Black roughscale catshark
+            Apristurus microps : Smalleye catshark
+            Apristurus micropterygeus : Smalldorsal catshark
+            Apristurus nakayai : Milk-eye catshark
+            Apristurus nasutus : Largenose catshark
+            Apristurus parvipinnis : Smallfin catshark
+            Apristurus pinguis : Fat catshark
+            Apristurus platyrhynchus : Spatulasnout catshark
+            Apristurus profundorum : Deep-water catshark
+            Apristurus riveri : Broadgill catshark
+            Apristurus saldanha : Saldanha catshark
+            Apristurus sibogae : Pale catshark
+            Apristurus sinensis : South China catshark
+            Apristurus spongiceps : Spongehead catshark
+            Apristurus stenseni : Panama ghost catshark
+        Asymbolus
+            Asymbolus analis : Australian spotted catshark
+            Asymbolus funebris : Blotched catshark
+            Asymbolus galacticus : Starry catshark
+            Asymbolus occiduus : Western spotted catshark
+            Asymbolus pallidus : Pale spotted catshark
+            Asymbolus parvus : Dwarf catshark
+            Asymbolus rubiginosus : Orange spotted catshark
+            Asymbolus submaculatus : Variegated catshark
+            Asymbolus vincenti : Gulf catshark
+        Atelomycterus
+            Atelomycterus baliensis : Bali catshark
+            Atelomycterus fasciatus : Banded sand catshark
+            Atelomycterus macleayi : Australian marbled catshark
+            Atelomycterus marmoratus : Coral catshark
+            Atelomycterus marnkalha : Eastern banded catshark
+        Aulohalaelurus
+            Aulohalaelurus kanakorum : New Caledonia catshark
+            Aulohalaelurus labiosus : Australian blackspotted catshark
+        Bythaelurus
+            Bythaelurus canescens : Dusky catshark
+            Bythaelurus clevai : Broadhead catshark
+            Bythaelurus dawsoni : New Zealand catshark
+            Bythaelurus giddingsi : GalГЎpagos catshark
+            Bythaelurus hispidus : Bristly catshark
+            Bythaelurus immaculatus : Spotless catshark
+            Bythaelurus incanus : Sombre catshark
+            Bythaelurus lutarius : Mud catshark
+        Cephaloscyllium
+            Cephaloscyllium albipinnum : Whitefin swellshark
+            Cephaloscyllium cooki : Cook's swellshark
+            Cephaloscyllium fasciatum : Reticulated swellshark
+            Cephaloscyllium formosanum : Formosa swellshark
+            Cephaloscyllium hiscosellum : Australian reticulate swellshark
+            Cephaloscyllium isabellum : Draughtsboard shark
+            Cephaloscyllium laticeps : Australian swellshark
+            Cephaloscyllium pictum : Painted swellshark
+            Cephaloscyllium sarawakensis : Sarawak pygmy swellshark
+            Cephaloscyllium signourum : Flagtail swellshark
+            Cephaloscyllium silasi : Indian swellshark
+            Cephaloscyllium speccum : Speckled swellshark
+            Cephaloscyllium stevensi : Steven's swellshark
+            Cephaloscyllium sufflans : Balloon shark
+            Cephaloscyllium umbratile : Blotchy swellshark
+            Cephaloscyllium variegatum : Saddled swellshark
+            Cephaloscyllium ventriosum : Swellshark
+            Cephaloscyllium zebrum : Narrowbar swellshark
+        Cephalurus
+            Cephalurus cephalus : Lollipop catshark
+        Figaro
+            Figaro boardmani : Australian sawtail catshark
+            Figaro striatus : Northern sawtail catshark
+        Galeus
+            Galeus antillensis : Antilles catshark
+            Galeus arae : Roughtail catshark
+            Galeus atlanticus : Atlantic sawtail catshark
+            Galeus cadenati : Longfin sawtail catshark
+            Galeus eastmani : Gecko catshark
+            Galeus gracilis : Slender sawtail catshark
+            Galeus longirostris : Longnose sawtail catshark
+            Galeus melastomus : Blackmouth catshark
+            Galeus mincaronei : Southern sawtail catshark
+            Galeus murinus : Mouse catshark
+            Galeus nipponensis : Broadfin sawtail catshark
+            Galeus piperatus : Peppered catshark
+            Galeus polli : African sawtail catshark
+            Galeus priapus : Phallic catshark
+            Galeus sauteri : Blacktip sawtail catshark
+            Galeus schultzi : Dwarf sawtail catshark
+            Galeus springeri : Springer's sawtail catshark
+        Halaelurus
+            Halaelurus boesemani : Speckled catshark
+            Halaelurus buergeri : Blackspotted catshark
+            Halaelurus lineatus : Lined catshark
+            Halaelurus maculosus : Indonesian speckled catshark
+            Halaelurus natalensis : Tiger catshark
+            Halaelurus quagga : Quagga catshark
+            Halaelurus sellus : Rusty catshark
+        Haploblepharus
+            Haploblepharus edwardsii : Puffadder shyshark
+            Haploblepharus fuscus : Brown shyshark
+            Haploblepharus kistnasamyi : Natal shyshark
+            Haploblepharus pictus : Dark shyshark
+        Holohalaelurus
+            Holohalaelurus favus : Honeycomb Izak
+            Holohalaelurus grennian : Grinning Izak
+            Holohalaelurus melanostigma : Crying Izak
+            Holohalaelurus punctatus : White-spotted Izak
+            Holohalaelurus regani : Izak catshark
+        Parmaturus
+            Parmaturus albimarginatus : White-tip catshark
+            Parmaturus albipenis : White-clasper catshark
+            Parmaturus bigus : Beige catshark
+            Parmaturus campechiensis : Campeche catshark
+            Parmaturus lanatus : Velvet catshark
+            Parmaturus macmillani : McMillan's cat shark
+            Parmaturus melanobranchus : Blackgill catshark
+            Parmaturus pilosus : Salamander shark
+            Parmaturus xaniurus : Filetail catshark
+        Pentanchus
+            Pentanchus profundicolus : Onefin catshark
+        Poroderma
+            Poroderma africanum : Pyjama shark
+            Poroderma pantherinum : Leopard catshark
+        Schroederichthys
+            Schroederichthys bivius : Narrowmouthed catshark
+            Schroederichthys chilensis : Redspotted catshark
+            Schroederichthys maculatus : Narrowtail catshark
+            Schroederichthys saurisqualus : Lizard catshark
+            Schroederichthys tenuis : Slender catshark
+        Scyliorhinus
+            Scyliorhinus besnardi : Polkadot catshark
+            Scyliorhinus boa : Boa catshark
+            Scyliorhinus canicula : Small-spotted catshark
+            Scyliorhinus capensis : Yellow-spotted catshark
+            Scyliorhinus cervigoni : West African catshark
+            Scyliorhinus comoroensis : Comoro catshark
+            Scyliorhinus garmani : Brownspotted catshark
+            Scyliorhinus haeckelii : Freckled catshark
+            Scyliorhinus hesperius : White-saddled catshark
+            Scyliorhinus meadi : Blotched catshark
+            Scyliorhinus retifer : Chain catshark
+            Scyliorhinus stellaris : Nursehound
+            Scyliorhinus tokubee : Izu catshark
+            Scyliorhinus torazame : Cloudy catshark
+            Scyliorhinus torrei : Dwarf catshark
+    Sphyrnidae
+        Eusphyra
+            Eusphyra blochii : Winghead shark
+        Sphyrna
+            Sphyrna corona : Scalloped bonnethead
+            Sphyrna gilberti : Carolina hammerhead
+            Sphyrna lewini : Scalloped hammerhead
+            Sphyrna media : Scoophead
+            Sphyrna mokarran : Great hammerhead
+            Sphyrna tiburo : Bonnethead
+            Sphyrna tudes : Smalleye hammerhead
+            Sphyrna zygaena : Smooth hammerhead
+    Triakidae
+        Furgaleus
+            Furgaleus macki : Whiskery shark
+        Galeorhinus
+            Galeorhinus galeus : Tope shark
+        Gogolia
+            Gogolia filewoodi : Sailback houndshark
+        Hemitriakis
+            Hemitriakis abdita : Deepwater sicklefin houndshark
+            Hemitriakis complicofasciata : Ocellate topeshark
+            Hemitriakis falcata : Sicklefin houndshark
+            Hemitriakis indroyonoi : Indonesian houndshark
+            Hemitriakis japanica : Japanese topeshark
+            Hemitriakis leucoperiptera : Whitefin topeshark
+        Hypogaleus
+            Hypogaleus hyugaensis : Blacktip tope
+        Iago
+            Iago garricki : Longnose houndshark
+            Iago mangalorensis : Mangalore houndshark
+            Iago omanensis : Bigeye houndshark
+            Iago sp.B : Bengal smallgill houndshark
+        Mustelus
+            Mustelus albipinnis : White-margin fin houndshark
+            Mustelus antarcticus : Gummy shark
+            Mustelus asterias : Starry smooth-hound
+            Mustelus californicus : Grey smooth-hound
+            Mustelus canis : Dusky smooth-hound
+            Mustelus dorsalis : Sharptooth smooth-hound
+            Mustelus fasciatus : Striped smooth-hound
+            Mustelus griseus : Spotless smooth-hound
+            Mustelus henlei : Brown smooth-hound
+            Mustelus higmani : Smalleye smooth-hound
+            Mustelus lenticulatus : Spotted estuary smooth-hound
+            Mustelus lunulatus : Sicklefin smooth-hound
+            Mustelus manazo : Starspotted smooth-hound
+            Mustelus mento : Speckled smooth-hound
+            Mustelus minicanis : Dwarf smooth-hound
+            Mustelus mosis : Arabian smooth-hound
+            Mustelus mustelus : Common smooth-hound
+            Mustelus norrisi : Narrowfin smooth-hound
+            Mustelus palumbes : Whitespotted smooth-hound
+            Mustelus punctulatus : Blackspotted smooth-hound
+            Mustelus ravidus : Australian grey smooth-hound
+            Mustelus schmitti : Narrownose smooth-hound
+            Mustelus sinusmexicanus : Gulf smoothhound
+            Mustelus stevensi : Western spotted gummy shark
+            Mustelus walkeri : Eastern spotted gummy shark
+            Mustelus whitneyi : Humpback smooth-hound
+            Mustelus widodoi : White-fin smooth-hound
+        Scylliogaleus
+            Scylliogaleus quecketti : Flapnose houndshark
+        Triakis
+            Triakis acutipinna : Sharpfin houndshark
+            Triakis maculata : Spotted houndshark
+            Triakis megalopterus : Sharptooth houndshark
+            Triakis scyllium : Banded houndshark
+            Triakis semifasciata : Leopard shark
+Echinorhiniformes
+    Echinorhinidae
+        Echinorhinus
+            Echinorhinus brucus : Bramble shark
+            Echinorhinus cookei : Prickly shark
+Heterodontiformes
+    Heterodontidae
+        Heterodontus
+            Heterodontus francisci : Horn shark
+            Heterodontus galeatus : Crested bullhead shark
+            Heterodontus japonicus : Japanese bullhead shark
+            Heterodontus mexicanus : Mexican hornshark
+            Heterodontus omanensis : Oman bullhead shark
+            Heterodontus portusjacksoni : Port Jackson shark
+            Heterodontus quoyi : Galapagos bullhead shark
+            Heterodontus ramalheira : Whitespotted bullhead shark
+            Heterodontus zebra : Zebra bullhead shark
+Hexanchiformes
+    Chlamydoselachidae
+        Chlamydoselachus
+            Chlamydoselachus africana : Southern African frilled shark
+            Chlamydoselachus anguineus : Frilled shark
+    Hexanchidae
+        Heptranchias
+            Heptranchias perlo : Sharpnose sevengill shark
+        Hexanchus
+            Hexanchus griseus : Bluntnose sixgill shark
+            Hexanchus nakamurai : Bigeyed sixgill shark
+        Notorynchus
+            Notorynchus cepedianus : Broadnose sevengill shark
+Lamniformes
+    Alopiidae
+        Alopias
+            Alopias pelagicus : Pelagic thresher
+            Alopias superciliosus : Bigeye thresher
+            Alopias vulpinus : Common thresher
+    Cetorhinidae
+        Cetorhinus
+            Cetorhinus maximus : Basking shark
+    Lamnidae
+        Carcharodon
+            Carcharodon carcharias : Great white shark
+        Isurus
+            Isurus oxyrinchus : Shortfin mako
+            Isurus paucus : Longfin mako
+        Lamna
+            Lamna ditropis : Salmon shark
+            Lamna nasus : Porbeagle
+    Megachasmidae
+        Megachasma
+            Megachasma pelagios : Megamouth shark
+    Mitsukurinidae
+        Mitsukurina
+            Mitsukurina owstoni : Goblin shark
+    Odontaspididae
+        Carcharias
+            Carcharias taurus : Sand tiger shark
+        Odontaspis
+            Odontaspis ferox : Smalltooth sand tiger
+            Odontaspis noronhai : Bigeye sand tiger
+    Pseudocarchariidae
+        Pseudocarcharias
+            Pseudocarcharias kamoharai : Crocodile shark
+Orectolobiformes
+    Brachaeluridae
+        Brachaelurus
+            Brachaelurus colcloughi : Bluegrey carpetshark
+            Brachaelurus waddi : Blind shark
+    Ginglymostomatidae
+        Ginglymostoma
+            Ginglymostoma cirratum : Nurse shark
+        Nebrius
+            Nebrius ferrugineus : Tawny nurse shark
+        Pseudoginglymostoma
+            Pseudoginglymostoma brevicaudatum : Short-tail nurse shark
+    Hemiscylliidae
+        Chiloscyllium
+            Chiloscyllium arabicum : Arabian carpetshark
+            Chiloscyllium burmensis : Burmese bamboo shark
+            Chiloscyllium griseum : Grey bamboo shark
+            Chiloscyllium hasselti : Hasselt's bamboo shark
+            Chiloscyllium indicum : Slender bamboo shark
+            Chiloscyllium plagiosum : Whitespotted bamboo shark
+            Chiloscyllium punctatum : Brownbanded bamboo shark
+        Hemiscyllium
+            Hemiscyllium freycineti : Indonesian speckled carpetshark
+            Hemiscyllium galei : Cenderwasih epaulette shark
+            Hemiscyllium hallstromi : Papuan epaulette shark
+            Hemiscyllium halmahera : Halmahera epaulette shark
+            Hemiscyllium henryi : Henry's epaulette shark
+            Hemiscyllium michaeli : Milne Bay epaulette shark
+            Hemiscyllium ocellatum : Epaulette shark
+            Hemiscyllium strahani : Hooded carpetshark
+            Hemiscyllium trispeculare : Speckled carpetshark
+    Orectolobidae
+        Eucrossorhinus
+            Eucrossorhinus dasypogon : Tasselled wobbegong
+        Orectolobus
+            Orectolobus floridus : Floral banded wobbegong
+            Orectolobus halei : Gulf wobbegong
+            Orectolobus hutchinsi : Western wobbegong
+            Orectolobus japonicus : Japanese wobbegong
+            Orectolobus leptolineatus : Indonesian wobbegong
+            Orectolobus maculatus : Spotted wobbegong
+            Orectolobus ornatus : Ornate wobbegong
+            Orectolobus parvimaculatus : Dwarf spotted wobbegong
+            Orectolobus reticulatus : Network wobbegong
+            Orectolobus wardi : Northern wobbegong
+        Sutorectus
+            Sutorectus tentaculatus : Cobbler wobbegong
+    Parascylliidae
+        Cirrhoscyllium
+            Cirrhoscyllium expolitum : Barbelthroat carpetshark
+            Cirrhoscyllium formosanum : Taiwan saddled carpetshark
+            Cirrhoscyllium japonicum : Saddled carpetshark
+        Parascyllium
+            Parascyllium collare : Collared carpetshark
+            Parascyllium elongatum : Elongate carpetshark
+            Parascyllium ferrugineum : Rusty carpetshark
+            Parascyllium sparsimaculatum : Ginger carpetshark
+            Parascyllium variolatum : Necklace carpetshark
+    Rhincodontidae
+        Rhincodon
+            Rhincodon typus : Whale shark
+    Stegostomatidae
+        Stegostoma
+            Stegostoma fasciatum : Zebra shark
+Pristiophoriformes
+    Pristiophoridae
+        Pliotrema
+            Pliotrema warreni : Sixgill sawshark
+        Pristiophorus
+            Pristiophorus cirratus : Longnose sawshark
+            Pristiophorus delicatus : Tropical sawshark
+            Pristiophorus japonicus : Japanese sawshark
+            Pristiophorus lanae : Lana's sawshark
+            Pristiophorus nancyae : African dwarf sawshark
+            Pristiophorus nudipinnis : Shortnose sawshark
+            Pristiophorus schroederi : Bahamas sawshark
+Squaliformes
+    Centrophoridae
+        Centrophorus
+            Centrophorus atromarginatus : Dwarf gulper shark
+            Centrophorus granulosus : Gulper shark
+            Centrophorus harrissoni : Dumb gulper shark
+            Centrophorus isodon : Blackfin gulper shark
+            Centrophorus lusitanicus : Lowfin gulper shark
+            Centrophorus moluccensis : Smallfin gulper shark
+            Centrophorus seychellorum : Seychelles gulper shark
+            Centrophorus squamosus : Leafscale gulper shark
+            Centrophorus tessellatus : Mosaic gulper shark
+            Centrophorus westraliensis : Western gulper shark
+            Centrophorus zeehaani : Southern dogfish
+        Deania
+            Deania calcea : Birdbeak dogfish
+            Deania hystricosa : Rough longnose dogfish
+            Deania profundorum : Arrowhead dogfish
+            Deania quadrispinosa : Longsnout dogfish
+    Dalatiidae
+        Dalatias
+            Dalatias licha : Kitefin shark
+        Euprotomicroides
+            Euprotomicroides zantedeschia : Taillight shark
+        Euprotomicrus
+            Euprotomicrus bispinatus : Pygmy shark
+        Heteroscymnoides
+            Heteroscymnoides marleyi : Longnose pygmy shark
+        Isistius
+            Isistius brasiliensis : Cookiecutter shark
+            Isistius plutodus : Largetooth cookiecutter shark
+        Mollisquama
+            Mollisquama parini : Pocket shark
+        Squaliolus
+            Squaliolus aliae : Smalleye pygmy shark
+            Squaliolus laticaudus : Spined pygmy shark
+    Etmopteridae
+        Aculeola
+            Aculeola nigra : Hooktooth dogfish
+        Centroscyllium
+            Centroscyllium excelsum : Highfin dogfish
+            Centroscyllium fabricii : Black dogfish
+            Centroscyllium granulatum : Granular dogfish
+            Centroscyllium kamoharai : Bareskin dogfish
+            Centroscyllium nigrum : Combtooth dogfish
+            Centroscyllium ornatum : Ornate dogfish
+            Centroscyllium ritteri : Whitefin dogfish
+        Etmopterus
+            Etmopterus baxteri : New Zealand lanternshark
+            Etmopterus bigelowi : Blurred lanternshark
+            Etmopterus brachyurus : Short-tail lanternshark
+            Etmopterus bullisi : Lined lanternshark
+            Etmopterus burgessi : Broad-snout lanternshark
+            Etmopterus carteri : Cylindrical lanternshark
+            Etmopterus caudistigmus : Tailspot lanternshark
+            Etmopterus compagnoi : Brown lanternshark
+            Etmopterus decacuspidatus : Combtooth lanternshark
+            Etmopterus dianthus : Pink lanternshark
+            Etmopterus dislineatus : Lined lanternshark
+            Etmopterus evansi : Blackmouth lanternshark
+            Etmopterus fusus : Pygmy lanternshark
+            Etmopterus gracilispinis : Broadbanded lanternshark
+            Etmopterus granulosus : Southern lanternshark
+            Etmopterus hillianus : Caribbean lanternshark
+            Etmopterus joungi : Shortfin smooth lanternshark
+            Etmopterus litvinovi : Smalleye lanternshark
+            Etmopterus lucifer : Blackbelly lanternshark
+            Etmopterus molleri : Slendertail lanternshark
+            Etmopterus perryi : Dwarf lanternshark
+            Etmopterus polli : African lanternshark
+            Etmopterus princeps : Great lanternshark
+            Etmopterus pseudosqualiolus : False lanternshark
+            Etmopterus pusillus : Smooth lanternshark
+            Etmopterus pycnolepis : Dense-scale lanternshark
+            Etmopterus robinsi : West Indian lanternshark
+            Etmopterus schultzi : Fringefin lanternshark
+            Etmopterus sculptus : Sculpted lanternshark
+            Etmopterus sentosus : Thorny lanternshark
+            Etmopterus sheikoi : Rasptooth dogfish
+            Etmopterus spinax : Velvet belly lanternshark
+            Etmopterus splendidus : Splendid lanternshark
+            Etmopterus unicolor : Bristled lanternshark
+            Etmopterus viator : Blue-eye lanternshark
+            Etmopterus villosus : Hawaiian lanternshark
+            Etmopterus virens : Green lanternshark
+        Trigonognathus
+            Trigonognathus kabeyai : Viper dogfish
+    Oxynotidae
+        Oxynotus
+            Oxynotus bruniensis : Prickly dogfish
+            Oxynotus caribbaeus : Caribbean roughshark
+            Oxynotus centrina : Angular roughshark
+            Oxynotus japonicus : Japanese roughshark
+            Oxynotus paradoxus : Sailfin roughshark
+    Somniosidae
+        Centroscymnus
+            Centroscymnus coelolepis : Portuguese dogfish
+            Centroscymnus owstonii : Roughskin dogfish
+        Centroselachus
+            Centroselachus crepidater : Longnose velvet dogfish
+        Proscymnodon
+            Proscymnodon macracanthus : Largespine velvet dogfish
+            Proscymnodon plunketi : Plunket shark
+        Scymnodalatias
+            Scymnodalatias albicauda : Whitetail dogfish
+            Scymnodalatias garricki : Azores dogfish
+            Scymnodalatias oligodon : Sparsetooth dogfish
+            Scymnodalatias sherwoodi : Sherwood's dogfish
+        Scymnodon
+            Scymnodon ringens : Knifetooth dogfish
+        Somniosus
+            Somniosus antarcticus : Southern sleeper shark
+            Somniosus longus : Frog shark
+            Somniosus microcephalus : Greenland shark
+            Somniosus pacificus : Pacific sleeper shark
+            Somniosus rostratus : Little sleeper shark
+        Zameus
+            Zameus ichiharai : Japanese velvet dogfish
+            Zameus squamulosus : Velvet dogfish
+    Squalidae
+        Cirrhigaleus
+            Cirrhigaleus asper : Roughskin spurdog
+            Cirrhigaleus australis : Southern mandarin dogfish
+            Cirrhigaleus barbifer : Mandarin dogfish
+        Squalus
+            Squalus acanthias : Spiny dogfish
+            Squalus albifrons : Eastern highfin spurdog
+            Squalus altipinnis : Western highfin spurdog
+            Squalus blainville : Longnose spurdog
+            Squalus brevirostris : Japanese shortnose spurdog
+            Squalus bucephalus : Bighead spurdog
+            Squalus chloroculus : Greeneye spurdog
+            Squalus crassispinus : Fatspine spurdog
+            Squalus cubensis : Cuban dogfish
+            Squalus edmundsi : Edmund's spurdog
+            Squalus formosus : Taiwan spurdog
+            Squalus grahami : Eastern longnose spurdog
+            Squalus griffini : Northern spiny dogfish
+            Squalus hemipinnis : Indonesian shortsnout spurdog
+            Squalus japonicus : Japanese spurdog
+            Squalus lalannei : Seychelles spurdog
+            Squalus megalops : Shortnose spurdog
+            Squalus melanurus : Blacktailed spurdog
+            Squalus mitsukurii : Shortspine spurdog
+            Squalus montalbani : Indonesian greeneye spurdog
+            Squalus nasutus : Western longnose spurdog
+            Squalus notocaudatus : Bartail spurdog
+            Squalus rancureli : Cyrano spurdog
+            Squalus raoulensis : Kermadec spiny dogfish
+            Squalus suckleyi : Spotted spiny dogfish
+Squatiniformes
+    Squatinidae
+        Squatina
+            Squatina aculeata : Sawback angelshark
+            Squatina africana : African angelshark
+            Squatina albipunctata : Eastern angelshark
+            Squatina argentina : Argentine angelshark
+            Squatina armata : Chilean angelshark
+            Squatina australis : Australian angelshark
+            Squatina caillieti : Philippines angelshark
+            Squatina californica : Pacific angelshark
+            Squatina dumeril : Sand devil
+            Squatina formosa : Taiwan angelshark
+            Squatina guggenheim : Angular angelshark
+            Squatina heteroptera : Gulf angelshark
+            Squatina japonica : Japanese angelshark
+            Squatina legnota : Indonesian angelshark
+            Squatina mexicana : Mexican angelshark
+            Squatina nebulosa : Clouded angelshark
+            Squatina occulta : Hidden angelshark
+            Squatina oculata : Smoothback angelshark
+            Squatina pseudocellata : Western angelshark
+            Squatina squatina : Angelshark
+            Squatina tergocellata : Ornate angelshark
+            Squatina tergocellatoides : Ocellated angelshark
