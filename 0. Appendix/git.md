@@ -408,3 +408,6 @@ git clean -d -x -f
 
 
 
+# Полезные ссылки
+
+1. [Git Notes for Professionals](https://goalkicker.com/GitBook/GitNotesForProfessionals.pdf)

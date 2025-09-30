@@ -1515,3 +1515,17 @@ TypeError: can't multiply sequence by non-int of type 'str'
 {'price': 32.2, 'name': 'AA', 'shares': 100}
 >>>
 ```
+
+
+# Полезные ссылки
+## Книги:
+
+1. [«Python. К вершинам мастерства», Лучано Рамальо](https://www.ozon.ru/product/python-k-vershinam-masterstva-lakonichnoe-i-effektivnoe-programmirovanie-vtoroe-izdanie-1798386192/?at=16tL3L09yiLG7P3NH276JyqH7BgqE3hz954O5fz9JlK4)
+2. [«Python. Разработка на основе тестирования», Гарри Персиваль](https://www.ozon.ru/product/python-razrabotka-na-osnove-testirovaniya-persival-garri-1798386287/?at=k2to9oRpVIVXnX5gSpn9r7BCY7yoZRsgQyLGkSmGBp7E)
+3. [«Высокопроизводительный Python: практическое пособие для людей», Миша Горелик, Ян Освальд](https://www.ozon.ru/product/vysokoproizvoditelnye-python-prilozheniya-prakticheskoe-rukovodstvo-po-711048849/?at=83tB1BAKVh4G7BqGTY6kJprtlxYDm2hyN7g86frpKB0N)
+4. [«Изучаем Python», Марк Лутц](https://www.ozon.ru/product/izuchaem-python-tom-1-5-e-izd-lutts-mark-588939040/?at=XQtk2kgzvhMm4zpvuBnLrRGh29Wy23hODV02U33jGWP)
+
+## Полезные заметки:
+
+1. [Типизированный Python](https://t.me/t0digital/151)
+2. [Python Notes for Professionals](https://goalkicker.com/PythonBook/PythonNotesForProfessionals.pdf)
