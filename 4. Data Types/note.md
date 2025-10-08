@@ -19,8 +19,8 @@
 Операция выполняется за **фиксированное время**, независимо от размера данных. Доступ к элементу по индексу в списке (массиве).
 
 ```python
-arr = [10, ^20, 30, ^40]
-print(arr[^2])  # Всегда один шаг — O(1)
+arr = [10, 20, 30, 40]
+print(arr[2])  # Всегда один шаг — O(1)
 ```
 
 **Почему O(1):**  
@@ -35,7 +35,7 @@ print(arr[^2])  # Всегда один шаг — O(1)
 def binary_search(arr, target):
     left, right = 0, len(arr) - 1
     while left <= right:
-        mid = (left + right) // ^2
+        mid = (left + right) // 2
         if arr[mid] == target:
             return mid
         elif arr[mid] < target:
