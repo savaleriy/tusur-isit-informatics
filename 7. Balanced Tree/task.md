@@ -158,7 +158,6 @@ class AVLTree:
 
 Реализовать косое дерево и продемонстрировать его свойство перемещения часто используемых элементов ближе к корню.
 
-
 ```python
 class SplayNode:
     def __init__(self, key, value=None):
@@ -230,8 +229,7 @@ class SplayTree:
     
     def _get_height(self, node):
         pass
-    ```
-
+```
 # B-дерево
 
 Реализовать B-дерево и продемонстрировать его работу.
