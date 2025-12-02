@@ -180,81 +180,8 @@ my_linked_list.delete(2)
 
 my_linked_list.display()
 ```
-## 4. Unorder map
 
-Вам необходимо реализовать класс `UnorderedMap`, который будет представлять собой хэш-таблицу (неупорядоченную карту). Хэш-таблица позволяет эффективно хранить и извлекать пары "ключ-значение".
-
-- **Класс `KeyValuePair`**:
-    
-    - Реализуйте класс `KeyValuePair`, который будет представлять собой пару "ключ-значение". Он должен содержать:
-        - `key`: ключ пары.
-        - `value`: значение, связанное с ключом.
-- **Класс `UnorderedMap`**:
-    
-    - Реализуйте класс `UnorderedMap`, который будет содержать следующие методы:
-        - `__init__(self, size=10)`: инициализирует хэш-таблицу с заданным количеством "ведер" (по умолчанию 10).
-        - `_hash(self, key)`: простая хэш-функция, которая вычисляет индекс для данного ключа.
-        - `set(self, key, value)`: добавляет или обновляет значение для указанного ключа.
-        - `get(self, key, default=None)`: возвращает значение по указанному ключу. Если ключ не найден, возвращает значение по умолчанию.
-        - `remove(self, key)`: удаляет пару "ключ-значение" по указанному ключу.
-        - `keys(self)`: возвращает список всех ключей в карте.
-        - `values(self)`: возвращает список всех значений в карте.
-        - `items(self)`: возвращает список всех пар "ключ-значение".
-
-```python
-class KeyValuePair:
-    def __init__(self, key, value):
-        self.key = key
-        self.value = value
-
-class UnorderedMap:
-    def __init__(self, size=10):
-        self.size = size
-        self.buckets = [[] for _ in range(size)]
-
-    def _hash(self, key):
-        # A simple hash function using the length of the key
-        return len(key) % self.size
-
-    def set(self, key, value):
-	    pass
-	    
-    def get(self, key, default=None):
-	    pass
-	    
-    def remove(self, key):
-	    pass
-	    
-    def keys(self):
-	    pass
-	    
-    def values(self):
-	    pass
-	    
-    def items(self):
-	    pass
-		
-my_map = UnorderedMap()
-
-my_map.set("name", "John")
-my_map.set("age", 25)
-my_map.set("city", "Example City")
-
-print("Keys:", my_map.keys())
-print("Values:", my_map.values())
-print("Items:", my_map.items())
-
-# Accessing values by key
-print("Name:", my_map.get("name"))
-print("Gender:", my_map.get("gender", "Not specified"))
-
-# Removing a key-value pair
-my_map.remove("age")
-
-print("Keys after removing 'age':", my_map.keys())
-```
-
-## 5. Unordered Set
+## 4. Unordered Set
 
 Вам необходимо реализовать класс `UnorderedSet`, который будет представлять собой неупорядоченное множество. Неупорядоченное множество позволяет хранить уникальные элементы и выполнять операции, такие как добавление, удаление и проверка наличия элементов.
 
@@ -309,8 +236,7 @@ print("Elements after removing 1:", my_set.elements())
 ```
 
 
-
-## 6. Binary Tree
+## 5. Binary Tree
 
 Вам необходимо реализовать класс для представления узла бинарного дерева и само бинарное дерево. Бинарное дерево — это структура данных, в которой каждый узел может иметь не более двух дочерних узлов, обычно называемых левым и правым.
 
@@ -367,199 +293,9 @@ print(tree.search(20))  # Ожидаемый вывод: None
 print(tree.in_order_traversal())  # Ожидаемый вывод: [5, 10, 15]
 print(tree.pre_order_traversal())  # Ожидаемый вывод: [10, 5, 15]
 print(tree.post_order_traversal())  # Ожидаемый вывод: [5, 15, 10]
-
 ```
 
-
-## 7. Hashmap
-
-Вам необходимо реализовать класс `HashMap`, который будет представлять собой хэш-таблицу. Хэш-таблица — это структура данных, которая обеспечивает эффективный доступ к данным, используя хэш-функцию для вычисления индексов.
-
-1. **Класс `HashMap`**:
-    - Реализуйте класс `HashMap`, который будет содержать следующие методы:
-        - `__init__(self, size=10)`: инициализирует хэш-таблицу заданного размера.
-        - `_hash(self, key)`: принимает ключ и возвращает индекс для хранения.
-        - `put(self, key, value)`: добавляет новую пару ключ-значение в хэш-таблицу.
-        - `get(self, key, default=None)`: возвращает значение, соответствующее ключу, или значение по умолчанию, если ключ не найден.
-        - `remove(self, key)`: удаляет пару ключ-значение из хэш-таблицы.
-        - `keys(self)`: возвращает список всех ключей в хэш-таблице.
-        - `values(self)`: возвращает список всех значений в хэш-таблице.
-        - `items(self)`: возвращает список всех пар ключ-значение в хэш-таблице.
-
-```python
-class HashMap:
-    def __init__(self, size=10):
-        self.size = size
-        self.slots = [None] * size
-        self.data = [None] * size
-
-    def _hash(self, key):
-        # A simple hash function using the length of the key
-	    pass
-
-    def put(self, key, value):
-        hash_value = self._hash(key)
-		# your code
-	    pass
-		
-    def get(self, key, default=None):
-		# your code
-	    pass
-
-    def remove(self, key):
-		# your code
-	    pass
-
-    def keys(self):
-		# your code
-	    pass
-
-    def values(self):
-		# your code
-	    pass
-	    
-    def items(self):
-	    # your code
-	    pass
-
-# Пример использования 
-my_hashmap = HashMap() 
-my_hashmap.put("name", "John") 
-my_hashmap.put("age", 25) 
-my_hashmap.put("city", "Example City") 
-print("Keys:", my_hashmap.keys()) # Ожидаемый вывод: Keys: ['name', 'age', 'city'] 
-print("Values:", my_hashmap.values()) # Ожидаемый вывод: Values: ['John', 25, 'Example City'] 
-print("Items:", my_hashmap.items()) # Ожидаемый вывод: Items: [('name', 'John'), ('age', 25), ('city', 'Example City')] 
-
-# Доступ к значениям по ключу 
-print("Name:", my_hashmap.get("name")) # Ожидаемый вывод: Name: John
-print("Gender:", my_hashmap.get("gender", "Not specified")) # Ожидаемый вывод: Gender: Not specified 
-
-# Удаление пары ключ-значение 
-my_hashmap.remove("age") 
-print("Keys after removing 'age':", my_hashmap.keys()) # Ожидаемый вывод: Keys after removing 'age': ['name', 'city']
-```
-## 8. Map
-
-Вам необходимо реализовать класс `SimpleMap`, который будет представлять собой простую ассоциативную коллекцию данных (или словарь). `SimpleMap` должен предоставлять основные методы для работы с ключами и значениями.
-
-**Класс `SimpleMap`**:
-- Реализуйте класс `SimpleMap`, который будет содержать следующие методы:
-    - `__init__(self)`: инициализирует пустой список для хранения элементов.
-    - `set(self, key, value)`: добавляет новую пару ключ-значение в коллекцию.
-    - `get(self, key, default=None)`: возвращает значение, соответствующее ключу, или значение по умолчанию, если ключ не найден.
-    - `remove(self, key)`: удаляет пару ключ-значение из коллекции.
-    - `keys(self)`: возвращает список всех ключей в коллекции.
-    - `values(self)`: возвращает список всех значений в коллекции.
-    - `items(self)`: возвращает список всех пар ключ-значение в коллекции.
-
-```python
-
-class SimpleMap:
-    def __init__(self):
-        self.items = []
-
-    def set(self, key, value):
-	    pass
-	    
-    def get(self, key, default=None):
-	    pass
-	    
-    def remove(self, key):
-	    pass
-	    
-    def keys(self):
-	    pass
-	    
-    def values(self):
-	    pass
-	    
-    def items(self):
-	    pass
-
-# Example usage:
-my_map = SimpleMap()
-
-my_map.set("name", "John")
-my_map.set("age", 25)
-my_map.set("city", "Example City")
-
-print("Keys:", my_map.keys())
-print("Values:", my_map.values())
-print("Items:", my_map.items())
-
-# Accessing values by key
-print("Name:", my_map.get("name"))
-print("Gender:", my_map.get("gender", "Not specified"))
-
-# Removing a key-value pair
-my_map.remove("age")
-
-print("Keys after removing 'age':", my_map.keys())
-```
-
-## 9. Heap
-
-Вам необходимо реализовать простую кучу (heap) на языке Python. Куча — это специализированная структура данных, которая удовлетворяет свойству кучи: в случае максимальной кучи, для любого узла `N` значение узла всегда больше или равно значениям его дочерних узлов. В случае минимальной кучи — наоборот.
-
-**Класс `Heap`**:
-
-- Реализуйте класс `Heap`, который будет содержать следующие методы:
-    - `__init__(self, max_heap=True)`: инициализирует пустую кучу. Аргумент `max_heap` определяет, будет ли это максимальная куча или минимальная.
-    - `insert(self, value)`: добавляет элемент в кучу.
-    - `extract(self)`: удаляет и возвращает корень кучи (наибольший или наименьший элемент в зависимости от типа кучи).
-    - `peek(self)`: возвращает корень кучи, не удаляя его.
-    - `is_empty(self)`: возвращает `True`, если куча пуста, иначе — `False`.
-    - `size(self)`: возвращает количество элементов в куче.
-    - `_heapify_up(self, index)`: восстанавливает свойства кучи, поднимая элемент вверх.
-    - `_heapify_down(self, index)`: восстанавливает свойства кучи, опуская элемент вниз.
-
-```python
-class Heap:
-    def __init__(self, max_heap=True):
-        self.heap = []
-        self.max_heap = max_heap
-
-    def is_empty(self):
-	    pass
-
-    def size(self):
-	    pass
-
-    def insert(self, value):
-	    pass
-
-    def extract(self):
-	    pass
-
-    def peek(self):
-	    pass
-
-    def _heapify_up(self, index):
-	    pass
-
-    def _heapify_down(self, index):
-	    pass
-
-# Пример использования
-h = Heap(max_heap=True)  # Создаем максимальную кучу
-
-# Вставка элементов
-h.insert(10)
-h.insert(4)
-h.insert(15)
-h.insert(20)
-h.insert(3)
-
-print("Корень кучи:", h.peek())  # Ожидаемый вывод: 20
-
-# Извлечение корней
-while not h.is_empty():
-	print("Извлеченный элемент:", h.extract())
-
-```
-
-## 10. Двухсвязный список
+## 6. Двухсвязный список
 
 Вам необходимо реализовать класс для представления узла двухсвязного списка и сам двухсвязный список. Двухсвязный список — это структура данных, в которой каждый узел содержит данные и ссылки на следующий и предыдущий узлы.
 
@@ -620,68 +356,7 @@ dll.display()  # Ожидаемый вывод: 0 <-> 1 <-> 3 <-> None
 dll.display_reverse()  # Ожидаемый вывод: 3 <-> 1 <-> 0 <-> None
 ```
 
-## 11. Реализация сбалансированного дерева (AVL-дерево)
-
-Вам необходимо реализовать класс для представления узла сбалансированного дерева (AVL-дерево) и само AVL-дерево. AVL-дерево — это самобалансирующееся бинарное дерево поиска, в котором разница высот левого и правого поддеревьев любого узла не превышает 1.
-
-- **Класс `AVLNode`**:
-    - Реализуйте класс `AVLNode`, который будет представлять узел AVL-дерева. Узел должен содержать:
-        - `data`: данные узла (может быть любого типа).
-        - `height`: высота узла (по умолчанию `1`).
-        - `left`: ссылка на левый дочерний узел (по умолчанию `None`).
-        - `right`: ссылка на правый дочерний узел (по умолчанию `None`).
-- **Класс `AVLTree`**:
-    - Реализуйте класс `AVLTree`, который будет предоставлять методы для работы с AVL-деревом:
-        - `insert(data)`: добавляет новый узел в дерево и выполняет балансировку.
-        - `delete(data)`: удаляет узел с заданными данными и выполняет балансировку.
-        - `search(data)`: ищет узел с заданными данными и возвращает его, если он найден, или `None`, если не найден.
-        - `in_order_traversal()`: выполняет обход дерева в симметричном порядке.
-
-```python
-class AVLNode:
-    def __init__(self, data):
-        self.data = data
-        self.height = 1
-        self.left = None
-        self.right = None
-
-class AVLTree:
-    def insert(self, root, data):
-	    pass
-
-    def delete(self, root, data):
-	    pass
-
-    def rotate_left(self, z):
-	    pass
-
-    def rotate_right(self, z):
-	    pass
-
-    def get_height(self, node):
-	    pass
-
-    def get_balance(self, node):
-	    pass
-
-	def get_min_value_node(self, node):
-	    pass
-	    
-    def in_order_traversal(self, root):
-		pass
-
-# Пример использования
-avl_tree = AVLTree()
-root = None
-root = avl_tree.insert(root, 10)
-root = avl_tree.insert(root, 20)
-root = avl_tree.insert(root, 30)
-
-print(avl_tree.in_order_traversal(root))  # Ожидаемый вывод: [10, 20, 30]
-
-```
-
-## 12. Приоритетная Очередь
+## 7. Приоритетная Очередь
 
 Вам необходимо реализовать приоритетную очередь с использованием собственного алгоритма. Эта очередь будет хранить элементы с приоритетами и обеспечивать доступ к элементам с наивысшим приоритетом.
 
@@ -728,67 +403,7 @@ while not pq.is_empty():
 
 ```
 
-## 13. Binary Tree 2
-
-Вам необходимо реализовать класс для представления узла бинарного дерева поиска и само бинарное дерево поиска. Бинарное дерево поиска — это структура данных, в которой каждый узел содержит ключ, и для любого узла все ключи в левом поддереве меньше, чем ключ узла, а все ключи в правом поддереве больше.
-
-- **Класс `TreeNode`**:
-    
-    - Реализуйте класс `TreeNode`, который будет представлять узел бинарного дерева. Узел должен содержать:
-        - `data`: данные узла (может быть любого типа).
-        - `left`: ссылка на левый дочерний узел (по умолчанию `None`).
-        - `right`: ссылка на правый дочерний узел (по умолчанию `None`).
-- **Класс `BinarySearchTree`**:
-    
-    - Реализуйте класс `BinarySearchTree`, который будет предоставлять методы для работы с BST:
-        - `insert(data)`: добавляет новый узел в дерево.
-        - `delete(data)`: удаляет узел с заданными данными.
-        - `search(data)`: ищет узел с заданными данными и возвращает его, если он найден, или `None`, если не найден.
-        - `in_order_traversal()`: выполняет обход дерева в симметричном порядке.
-
-```python
-class TreeNode:
-    def __init__(self, data):
-        self.data = data
-        self.left = None
-        self.right = None
-
-class BinarySearchTree:
-    def __init__(self):
-        self.root = None
-
-    def insert(self, data):
-	    pass
-    
-	def delete(self, data):
-	    pass
-
-    def get_min_value_node(self, node):
-	    pass
-
-    def search(self, data):
-	    pass
-
-    def in_order_traversal(self):
-	    pass
-
-# Пример использования
-bst = BinarySearchTree()
-bst.insert(10)
-bst.insert(5)
-bst.insert(15)
-bst.insert(3)
-
-print(bst.in_order_traversal())  # Ожидаемый вывод: [3, 5, 10, 15]
-
-bst.delete(5)
-print(bst.in_order_traversal())  # Ожидаемый вывод: [3, 10, 15]
-
-print(bst.search(10))  # Ожидаемый вывод: <__main__.TreeNode object at ...>
-print(bst.search(20))  # Ожидаемый вывод: None
-```
-
-## 14. `swap`
+## 8. `swap`
 
 Реализуйте функцию `swap_nodes` для односвязного списка, которая **меняет местами** два узла по заданным индексам в **разных** списках.
 
@@ -841,7 +456,7 @@ print_linked_list(list2)
 ```
 
 
-## 15. `reduce`
+## 9. `reduce`
 
 Вам необходимо реализовать класс, представляющий узел связного списка, и функцию, которая будет аккумулировать значения элементов списка с помощью переданной функции.
 
@@ -870,7 +485,7 @@ print(result2)  # Output: 24
 
 ```
 
-## 16. Получить N-й 
+## 10. Получить N-й 
 
 Вам нужно реализовать класс, представляющий узел связного списка, а также функцию, которая возвращает N-й элемент списка по заданному индексу.
 
@@ -902,7 +517,7 @@ except ValueError as e:
     print(e)  # Ожидаемый вывод: Invalid index or empty list
 ```
 
-##  17. `length` и `count` 
+##  11. `length` и `count` 
 
 Вам необходимо реализовать класс для представления узла связного списка и две функции, которые будут работать с этим списком: одна для вычисления длины списка, а другая для подсчета количества вхождений определённого значения.
 
@@ -932,7 +547,7 @@ list2 = Node(1, Node(1, Node(1, Node(2, Node(2, Node(2, Node(2, Node(3, Node(3))
 result_count_2 = count(list2, 2)
 print(result_count_2)  # Output: 4
 ```
-## 18. `map` 
+## 12. `map` 
 
 Вам необходимо реализовать класс для представления узла связного списка и функцию, которая будет применять заданную функцию к каждому элементу этого списка, создавая новый связный список с результатами.
 
@@ -964,7 +579,7 @@ while current:
 
 ```
 
-## 20. `filter` 
+## 13. `filter` 
 
 Вам необходимо реализовать класс для представления узла связного списка и функцию, которая будет фильтровать элементы списка на основе заданного предиката. Функция должна создавать новый связный список, содержащий только те элементы, которые соответствуют условию предиката.
 
