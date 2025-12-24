@@ -59,3 +59,8 @@
 3.  [Алгоритмы](https://education.yandex.ru/handbook/algorithms)
 4.  [Математика](https://education.yandex.ru/handbook/math)
 5.  [Stepik](https://stepik.org/catalog) — большое количество качественных бесплатных курсов.
+
+
+# Форма обратной связи:
+
+[Тык](https://forms.yandex.ru/u/676d0c2002848fc8257e91ab)
