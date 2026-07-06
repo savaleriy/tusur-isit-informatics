@@ -2,7 +2,7 @@
 
 all: utf8 fix-blocks build
 
-build:
+build: clean
 	mkdocs build
 
 serve:

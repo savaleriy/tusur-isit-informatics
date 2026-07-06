@@ -1,6 +1,15 @@
 # Данные
 
->[!tip] Хорошие программисты беспокоятся о структурах данных и их отношениях.											 <br>Линус Торвальдс<br>
+<figure class="epigraph">
+  <blockquote>
+    <p>Хорошие программисты беспокоятся о структурах данных и их отношениях.</p>
+  </blockquote>
+  <figcaption>
+    <img src="../images/portraits/torvalds.jpg" alt="">
+    Линус Торвальдс
+  </figcaption>
+</figure>
+
 
 ## Вспомнить все 
 

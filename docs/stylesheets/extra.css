@@ -1,0 +1,69 @@
+/* Epigraph: right-floated quote card with portrait */
+
+.epigraph {
+  float: right;
+  clear: right;
+  max-width: 320px;
+  margin: 0 0 1.5em 2em;
+  padding: 1.2em 1.4em;
+  background: var(--md-code-bg-color);
+  border-top: 3px solid var(--md-primary-fg-color);
+  border-radius: 6px;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.epigraph blockquote {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-style: italic;
+  color: var(--md-default-fg-color--light);
+}
+
+.epigraph blockquote p {
+  margin: 0;
+}
+
+.epigraph blockquote p::before {
+  content: "\201C";
+  font-size: 2em;
+  color: var(--md-primary-fg-color);
+  line-height: 0;
+  vertical-align: -0.35em;
+  margin-right: 0.08em;
+  font-style: normal;
+}
+
+.epigraph figcaption {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  margin-top: 0.7em;
+  font-style: normal;
+  font-size: 0.78rem;
+  color: var(--md-default-fg-color);
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  padding-top: 0.6em;
+}
+
+.epigraph figcaption img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Dark mode tweaks */
+[data-md-color-scheme="slate"] .epigraph {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (max-width: 600px) {
+  .epigraph {
+    float: none;
+    max-width: 100%;
+    margin: 1em 0;
+  }
+}

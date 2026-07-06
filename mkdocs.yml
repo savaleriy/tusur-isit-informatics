@@ -48,18 +48,18 @@ markdown_extensions:
       permalink: true
       toc_depth: 3
 
-extra_javascript:
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
 plugins:
   - search:
       lang:
         - ru
         - en
 
+extra_css:
+  - stylesheets/extra.css
+
 hooks:
   - hooks/copy_data.py
+  - hooks/mathjax.py
 
 nav:
   - Главная: index.md
