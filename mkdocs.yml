@@ -1,0 +1,95 @@
+site_name: Информатика — ИСиТ ТУСУР
+site_description: Материалы практических и лабораторных занятий по дисциплине «Информатика»
+site_author: Валерий Семенюк
+site_url: https://savaleriy.github.io/tusur-isit-informatics/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Тёмная тема
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Светлая тема
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      lang:
+        - ru
+        - en
+
+hooks:
+  - hooks/copy_data.py
+
+nav:
+  - Главная: index.md
+  - Приложение:
+      - Bash: 0. Appendix/bash.md
+      - C: 0. Appendix/clang.md
+      - Git: 0. Appendix/git.md
+      - How to Solve: 0. Appendix/HowToSolve.md
+      - Логарифмы: 0. Appendix/log.md
+      - Python: 0. Appendix/python.md
+      - Настройка IDE: 0. Appendix/simple-ide.md
+  - 1. Введение:
+      - Конспект: 1. Intro/note.md
+      - Задачи: 1. Intro/task.md
+  - 2. Основы:
+      - Конспект: 2. Start/note.md
+      - Задачи: 2. Start/task.md
+      - Python: 2. Start/python.md
+  - 3. Алгоритмы:
+      - Конспект: 3. Algo/note.md
+      - Задачи: 3. Algo/task.md
+      - Python: 3. Algo/python.md
+  - 4. Структуры данных:
+      - Конспект: 4. Data Types/note.md
+      - Задачи: 4. Data Types/task.md
+      - Python: 4. Data Types/python.md
+  - 5. Стратегии:
+      - Конспект: 5. Strategy/note.md
+      - Задачи: 5. Strategy/task.md
+  - "6. Lab 1: UNO": 6. Lab 1 UNO/task.md
+  - 7. Деревья:
+      - Конспект: 7. Balanced Tree/note.md
+      - Задачи: 7. Balanced Tree/task.md
+  - "8. Lab 2: Maze": 8. Lab 2 Maze/task.md
+  - 9. Криптография:
+      - Конспект: 9. Crypto/note.md
+      - Задачи: 9. Crypto/task.md
+  - Тесты:
+      - Тест 1: Tests/2025_test_1.md
+      - Тест 2: Tests/2025_test_2.md
+  - Экзамен: Exam/exam_2025.md
+  - AI Agenda: AI_AGENDA.md
+  - Успеваемость: Students/2025.md
