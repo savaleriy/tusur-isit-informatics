@@ -31,9 +31,11 @@ GCC - это очень хорошая коллекция компиляторо
    pacman -Syuu
    ```
 5. Теперь, когда MSYS2 полностью обновлён, мы установим GCC и общие инструменты для сборки. Когда вам будет предложено выбрать пакеты и подтвердить установку, просто нажмите `Enter`.
+
 ```bash
 pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchain mingw-w64-i686-cmake mingw-w64-x86_64-cmake
 ```
+
 1. Добавите в `PATH` `C:\dev\msys64\mingw64\bin` и `C:\dev\msys64\mingw32\bin` в таком порядке. Обратите внимание, что MSYS2 также помещает в этот каталог множество других инструментов, в первую очередь Python. Поэтому поместите эти записи ниже любоых других инструментов, которые Вы могли бы установить в вашем `PATH`.
 2. Добавьте в переменные среды
 Вам нужно добавить это значение в переменную среды PATH: `C:\dev\msys64\mingw64\bin`
@@ -62,6 +64,7 @@ pacman -S --needed base-devel mingw-w64-i686-toolchain mingw-w64-x86_64-toolchai
 
 ## Инструкция ниже - это пример установки библиотеки
 Прежде всего я предлагаю проверить пакетный менеджер MSYS2. В нём находится очень много готовых библиотечных пакетов. Вы можете найти найти пакетный репозиторий, используя `pacman -Ss ваша_библиоткека`, например:
+
 ```bash
 $ pacman -Ss boost
 mingw32/mingw-w64-i686-boost 1.73.0-4
@@ -69,7 +72,9 @@ mingw32/mingw-w64-i686-boost 1.73.0-4
 mingw64/mingw-w64-x86_64-boost 1.73.0-4
     Free peer-reviewed portable C++ source libraries (mingw-w64)
 ```
+
 Если имя пакета начинается с mingw, это библиотека. Установите её с помощью `pacman -Sy имя_пакета`. Например:
+
 ```bash
 $ pacman -Sy mingw-w64-i686-boost mingw-w64-x86_64-boost
 :: Обновление баз данных пакетов...
@@ -116,6 +121,7 @@ $ pacman -Sy mingw-w64-i686-boost mingw-w64-x86_64-boost
 ```
 
 3. Конфигурация, компиляция и установка:
+
 ```bash
 	make -f win32/Makefile.gcc install BINARY_PATH=/mingw64/bin \
 	INCLUDE_PATH=/mingw64/include LIBRARY_PATH=/mingw64/lib
@@ -128,5 +134,5 @@ $ pacman -Sy mingw-w64-i686-boost mingw-w64-x86_64-boost
 
 [Огромный гайд по настройке рабочего окружения: Linux, VScode, Python](https://habr.com/ru/companies/timeweb/articles/916040/)
 [С/С++ на Linux в Visual Studio Code для начинающих](https://habr.com/ru/companies/microsoft/articles/333680/)
-[Linux для начинающих: WSL — это читерство. Как Microsoft дал нам Linux без головной боли](https://habr.com/ru/companies/ntechlab/articles/908450/)
-[Как настроить Visual Studio Code для C, C++, Java, Python](https://nuancesprog.ru/p/8119/)
+[Linux для начинающих: WSL --- это читерство. Как Microsoft дал нам Linux без головной боли](https://habr.com/ru/companies/ntechlab/articles/908450/)
+[Как настроить Visual Studio Code для C, C++, Java, Python](https://nuancesprog.ru/p/8119/)
