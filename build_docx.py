@@ -14,6 +14,7 @@ import markdown
 
 ROOT = Path(__file__).resolve().parent
 OUTPUT = ROOT / "Информатика_конспект.docx"
+TEMPLATE = ROOT / "style.docx"
 
 SECTIONS = [
     ("Приложение. Bash",                 "docs/0. Appendix/bash.md"),
@@ -119,6 +120,7 @@ def build():
         "--metadata", "author=ТУСУР, ИСиТ",
         "--metadata", "lang=ru",
         "--toc", "--toc-depth=2", "--number-sections",
+        f"--reference-doc={TEMPLATE}"
     ], check=True)
 
     print(f"==> Готово: {OUTPUT}")
