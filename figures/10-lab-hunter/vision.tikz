@@ -1,0 +1,63 @@
+\begin{tikzpicture}[x=8mm, y=8mm]
+
+  % ================= Левая панель: по прямой =================
+  \begin{scope}
+    \node[lbl, font=\scriptsize\bfseries] at (3, 5.1) {Так кажется: круг по прямой};
+
+    \foreach \x in {0,...,6} \foreach \y in {0,...,4}
+      \fill[boxfill] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+    \foreach \x/\y in {2/3, 2/2, 2/1, 4/3, 4/2, 4/1}
+      \fill[fg!55!mixbg] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+    \foreach \x in {0,...,6} \foreach \y in {0,...,4} {
+      \pgfmathsetmacro{\d}{sqrt((\x-3)*(\x-3) + (\y-2)*(\y-2))}
+      \ifdim \d pt < 3.01pt
+        \fill[accent!25!mixbg, opacity=0.75]
+          (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+      \fi
+    }
+    \foreach \x/\y in {2/3, 2/2, 2/1, 4/3, 4/2, 4/1}
+      \fill[fg!55!mixbg] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+    \draw[muted, line width=0.3pt, step=1] (-0.5, -0.5) grid (6.5, 4.5);
+    \draw[accent, densely dashed, line width=0.8pt] (3, 2) circle (3);
+    \node[circle, draw=accent, fill=accent!30!mixbg, line width=1pt,
+          minimum size=6mm, inner sep=0pt, font=\scriptsize] at (3, 2) {О};
+
+    \node[lbl, align=center] at (3, -1.4)
+         {Евклидов круг радиуса 3.\\Охотник \emph{видит} сквозь стены -\\так не бывает.};
+  \end{scope}
+
+  % ================= Правая панель: по коридорам =================
+  \begin{scope}[shift={(8.6, 0)}]
+    \node[lbl, font=\scriptsize\bfseries] at (3, 5.1) {Так на самом деле: шары по рёбрам};
+
+    \foreach \x in {0,...,6} \foreach \y in {0,...,4}
+      \fill[boxfill] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+    % клетки на расстоянии <= 3 шагов от (3,2) в обход стен
+    \foreach \x/\y in {3/2, 3/1, 3/3, 3/0, 3/4, 2/0, 4/0, 2/4, 4/4}
+      \fill[accent!25!mixbg] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+    \foreach \x/\y in {2/3, 2/2, 2/1, 4/3, 4/2, 4/1}
+      \fill[fg!55!mixbg] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+    \draw[muted, line width=0.3pt, step=1] (-0.5, -0.5) grid (6.5, 4.5);
+
+    \foreach \x/\y/\d in {3/1/1, 3/3/1, 3/0/2, 3/4/2,
+                          2/0/3, 4/0/3, 2/4/3, 4/4/3}
+      \node[text=accent, font=\tiny] at (\x+0.32, \y-0.32) {\d};
+
+    \node[circle, draw=accent, fill=accent!30!mixbg, line width=1pt,
+          minimum size=6mm, inner sep=0pt, font=\scriptsize] at (3, 2) {О};
+
+    \node[lbl, align=center] at (3, -1.4)
+         {Обход в ширину на 3 шага.\\Стены обрезают обзор,\\соседняя клетка за стеной невидима.};
+  \end{scope}
+
+  \node[lbl, anchor=north, align=center] at (5.8, -2.8)
+       {Обзор задан в \textbf{рёбрах}, а не в клетках по прямой.\\
+        Значит, \emph{что я вижу} считается тем же обходом в ширину,\\
+        что и кратчайший путь - одним и тем же кодом.};
+
+\end{tikzpicture}

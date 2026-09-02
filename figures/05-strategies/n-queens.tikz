@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=12mm, y=12mm]
+
+  % Доска 4x4
+  \foreach \r in {0,...,3} {
+    \foreach \c in {0,...,3} {
+      \node[cell, minimum width=11mm, minimum height=11mm] at (\c, \r) {};
+    }
+  }
+
+  % Ферзи: (колонка, строка)
+  \foreach \c/\r in {1/0, 3/1, 0/2, 2/3} {
+    \node[circle, draw=accent, fill=accent, inner sep=0pt, minimum size=7mm] at (\c, \r) {};
+  }
+
+  % Подписи строк
+  \foreach \r in {0,...,3} {
+    \node[lbl] at (-0.65, \r) {\r};
+  }
+  \node[lbl, rotate=90] at (-1.25, 1.5) {строка};
+
+  % Подписи столбцов
+  \foreach \c in {0,...,3} {
+    \node[lbl] at (\c, -0.6) {\c};
+  }
+  \node[lbl] at (1.5, -1.2) {колонка};
+
+  \node[lbl, anchor=west, align=left] at (4.2, 1.5)
+    {одно из двух решений\\для доски $4 \times 4$};
+
+\end{tikzpicture}

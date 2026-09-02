@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=17mm, y=-14mm]
+
+  \node[lbl, anchor=east, align=right] at (-0.45, 0) {гости\\(по порядку прихода)};
+  \node[lbl, anchor=east, align=right] at (-0.45, 2) {места\\в зале};
+
+  % Гость k сел на место seats[k]
+  \foreach \seat [count=\k from 1] in {3, 1, 5, 2, 4} {
+    \pgfmathtruncatemacro{\x}{\k - 1}
+    \node[box, hi2, minimum width=11mm] (g\k) at (\x, 0) {\k};
+    \node[lbl, above=1mm of g\k] {сел на \seat};
+  }
+
+  % Места
+  \foreach \guest [count=\s from 1] in {2, 4, 1, 5, 3} {
+    \pgfmathtruncatemacro{\x}{\s - 1}
+    \node[box, hi, minimum width=11mm] (s\s) at (\x, 2) {\guest};
+    \node[lbl, below=1mm of s\s] {место \s};
+  }
+
+  \foreach \from/\to in {1/3, 2/1, 3/5, 4/2, 5/4}
+    \draw[arr] (g\from) -- (s\to);
+
+  \node[lbl, anchor=west, align=left] at (4.55, 0) {\texttt{seats = [3, 1, 5, 2, 4]}};
+  \node[lbl, anchor=west, align=left] at (4.55, 2) {\texttt{[2, 4, 1, 5, 3]}};
+
+\end{tikzpicture}

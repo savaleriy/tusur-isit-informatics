@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[box, hi,  minimum width=34mm, minimum height=13mm, align=center] (p1) at (0, 0)
+       {\textbf{1. Понять}\\[1mm] что дано, что найти};
+  \node[box, hi,  minimum width=34mm, minimum height=13mm, align=center] (p2) at (5.2, 0)
+       {\textbf{2. Составить план}\\[1mm] найти связь и идею};
+  \node[box, hi,  minimum width=34mm, minimum height=13mm, align=center] (p3) at (5.2, -3.2)
+       {\textbf{3. Выполнить}\\[1mm] шаг за шагом, с проверкой};
+  \node[box, hi2, minimum width=34mm, minimum height=13mm, align=center] (p4) at (0, -3.2)
+       {\textbf{4. Оглянуться}\\[1mm] проверить и осмыслить};
+
+  \draw[arracc] (p1) -- (p2);
+  \draw[arracc] (p2) -- (p3);
+  \draw[arracc] (p3) -- (p4);
+
+  % возврат: план не сработал
+  \draw[arrmuted] (p2.north) .. controls (4.2, 2.0) and (0.8, 2.0) .. (p1.north)
+        node[midway, above, lbl] {план не сработал - вернуться};
+
+  % цикл: новая задача
+  \draw[arrmuted] (p4.west) .. controls (-3.4, -3.2) and (-3.4, 0) .. (p1.west)
+        node[midway, left, lbl, align=center] {что узнали,\\пригодится\\в следующей};
+
+\end{tikzpicture}

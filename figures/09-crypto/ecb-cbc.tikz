@@ -1,0 +1,56 @@
+\begin{tikzpicture}[x=13mm, y=12mm,
+  ebox/.style={draw=fg, fill=boxfill, rounded corners=1pt, minimum width=10mm, minimum height=7mm, align=center, inner sep=1pt}]
+
+  % ===== ECB =====
+  \node[lbl, anchor=west] at (0, 0.9) {ECB};
+
+  \node[cell, hi2] (p1) at (0.2, 0.2) {P};
+  \node[cell] (p2) at (0.2, -1.0) {P};
+  \node[cell, hi2] (p3) at (0.2, -2.2) {P};
+  \node[ebox] (e1) at (1.5, 0.2) {E};
+  \node[ebox] (e2) at (1.5, -1.0) {E};
+  \node[ebox] (e3) at (1.5, -2.2) {E};
+  \node[cell, hi2] (c1) at (2.8, 0.2) {C};
+  \node[cell] (c2) at (2.8, -1.0) {C};
+  \node[cell, hi2] (c3) at (2.8, -2.2) {C};
+
+  \draw[arr] (p1) -- (e1);
+  \draw[arr] (e1) -- (c1);
+  \draw[arr] (p2) -- (e2);
+  \draw[arr] (e2) -- (c2);
+  \draw[arr] (p3) -- (e3);
+  \draw[arr] (e3) -- (c3);
+
+  \node[lbl, anchor=west, align=left] at (3.8, -0.9)
+    {одинаковые блоки\\дают одинаковый шифр};
+
+  % ===== CBC =====
+  \node[lbl, anchor=west] at (6.4, 0.9) {CBC};
+
+  \node[cell] (iv) at (6.6, 0.2) {IV};
+  \node[ebox] (x1) at (8.0, 0.2) {$\oplus$};
+  \node[ebox] (f1) at (9.3, 0.2) {E};
+  \node[cell] (d1) at (10.6, 0.2) {C};
+  \node[cell] (q1) at (8.0, -1.1) {P};
+
+  \node[ebox] (x2) at (8.0, -2.6) {$\oplus$};
+  \node[ebox] (f2) at (9.3, -2.6) {E};
+  \node[cell] (d2) at (10.6, -2.6) {C};
+  \node[cell] (q2) at (8.0, -3.9) {P};
+
+  \draw[arr] (iv) -- (x1);
+  \draw[arr] (q1) -- (x1);
+  \draw[arr] (x1) -- (f1);
+  \draw[arr] (f1) -- (d1);
+
+  % обратная связь: C1 идёт в следующий XOR
+  \draw[arracc] (d1.south) -- (10.6, -1.6) -- (6.6, -1.6) -- (6.6, -2.6) -- (x2.west);
+
+  \draw[arr] (q2) -- (x2);
+  \draw[arr] (x2) -- (f2);
+  \draw[arr] (f2) -- (d2);
+
+  \node[lbl, anchor=west, align=left] at (11.5, -0.7)
+    {каждый блок зависит\\от предыдущего};
+
+\end{tikzpicture}

@@ -1,6 +1,6 @@
-.PHONY: all build serve clean docx utf8 fix-blocks
+.PHONY: all build serve clean docx pdf
 
-all: utf8 fix-blocks build
+all: build
 
 build: clean
 	mkdocs build
@@ -12,10 +12,7 @@ clean:
 	rm -rf site/
 
 docx:
-	python3 build_docx.py
+	python3 build_docx.py docx
 
-utf8:
-	python3 scripts/replace_utf8.py
-
-fix-blocks:
-	python3 scripts/fix_code_blocks.py
+pdf:
+	python3 build_docx.py pdf

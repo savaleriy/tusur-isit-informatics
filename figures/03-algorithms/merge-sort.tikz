@@ -1,0 +1,59 @@
+\begin{tikzpicture}[x=10mm, y=12mm,
+  grp/.style={draw=muted, rounded corners=2pt, inner sep=2pt}]
+
+  % ---------- разделение ----------
+  \node[lbl, anchor=west, align=left] at (-1.6, 0.2) {разделение:\\режем пополам};
+
+  \node[cell] (a0) at (1.4, 0.2) {7};
+  \node[cell] (a1) at (2.4, 0.2) {2};
+  \node[cell] (a2) at (3.4, 0.2) {5};
+  \node[cell] (a3) at (4.4, 0.2) {1};
+  \node[grp, fit=(a0)(a3)] (A) {};
+
+  \node[cell] (b0) at (0.6, -1.2) {7};
+  \node[cell] (b1) at (1.6, -1.2) {2};
+  \node[grp, fit=(b0)(b1)] (BL) {};
+  \node[cell] (b2) at (4.2, -1.2) {5};
+  \node[cell] (b3) at (5.2, -1.2) {1};
+  \node[grp, fit=(b2)(b3)] (BR) {};
+
+  \node[cell] (c0) at (0.1, -2.6) {7};
+  \node[grp, fit=(c0)] (C0) {};
+  \node[cell] (c1) at (2.1, -2.6) {2};
+  \node[grp, fit=(c1)] (C1) {};
+  \node[cell] (c2) at (3.7, -2.6) {5};
+  \node[grp, fit=(c2)] (C2) {};
+  \node[cell] (c3) at (5.7, -2.6) {1};
+  \node[grp, fit=(c3)] (C3) {};
+
+  \draw[arr] (A.south)  -- (BL.north);
+  \draw[arr] (A.south)  -- (BR.north);
+  \draw[arr] (BL.south) -- (C0.north);
+  \draw[arr] (BL.south) -- (C1.north);
+  \draw[arr] (BR.south) -- (C2.north);
+  \draw[arr] (BR.south) -- (C3.north);
+
+  % ---------- слияние ----------
+  \node[cell, hi2] (d0) at (0.6, -4.2) {2};
+  \node[cell, hi2] (d1) at (1.6, -4.2) {7};
+  \node[grp, fit=(d0)(d1)] (DL) {};
+  \node[cell, hi2] (d2) at (4.2, -4.2) {1};
+  \node[cell, hi2] (d3) at (5.2, -4.2) {5};
+  \node[grp, fit=(d2)(d3)] (DR) {};
+
+  \node[cell, hi] (e0) at (1.4, -5.6) {1};
+  \node[cell, hi] (e1) at (2.4, -5.6) {2};
+  \node[cell, hi] (e2) at (3.4, -5.6) {5};
+  \node[cell, hi] (e3) at (4.4, -5.6) {7};
+  \node[grp, fit=(e0)(e3)] (E) {};
+
+  \draw[arracc] (C0.south) -- (DL.north);
+  \draw[arracc] (C1.south) -- (DL.north);
+  \draw[arracc] (C2.south) -- (DR.north);
+  \draw[arracc] (C3.south) -- (DR.north);
+  \draw[arracc] (DL.south) -- (E.north);
+  \draw[arracc] (DR.south) -- (E.north);
+
+  \node[lbl, anchor=west, align=left] at (-1.6, -5.0) {слияние:\\сливаем по парам};
+
+\end{tikzpicture}

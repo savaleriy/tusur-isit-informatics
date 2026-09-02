@@ -1,0 +1,71 @@
+\begin{tikzpicture}[x=9mm, y=9mm]
+
+  % --- Фон: свободные клетки ---
+  \foreach \x in {0,...,8} \foreach \y in {0,...,5}
+    \fill[boxfill] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+  % --- Пересечённая местность: цифра равна числу тактов ---
+  \foreach \x/\y/\c in {3/3/2, 4/3/2, 5/3/2, 7/5/2, 2/1/3, 3/1/3} {
+    \fill[accentb!18!mixbg] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+    \node[text=accentb, font=\tiny] at (\x+0.32, \y-0.32) {\c};
+  }
+
+  % --- Стены ---
+  \foreach \x/\y in {1/4, 2/4, 4/4, 6/4, 7/4, 1/2, 3/2, 4/2, 5/2, 7/2}
+    \fill[fg!55!mixbg] (\x-0.5, \y-0.5) rectangle (\x+0.5, \y+0.5);
+
+  \draw[muted, line width=0.35pt, step=1] (-0.5, -0.5) grid (8.5, 5.5);
+
+  % --- Припасы ---
+  \foreach \x/\y in {0/4, 3/5, 5/4, 8/2, 1/0, 8/4}
+    \fill[fg] (\x, \y) circle (1.1mm);
+
+  % --- Энергайзеры ---
+  \foreach \x/\y in {8/0, 0/1} {
+    \fill[accent] (\x, \y) circle (1.9mm);
+    \draw[accent, line width=0.6pt] (\x, \y) circle (3.1mm);
+  }
+
+  % --- Выход ---
+  \draw[accentb, line width=1.3pt, densely dashed]
+    (6.55, -0.45) rectangle (7.45, 0.45);
+  \node[text=accentb, font=\tiny\bfseries] at (7, 0) {В};
+
+  % --- Агенты ---
+  \node[circle, draw=accentb, fill=accentb!30!mixbg, line width=1pt,
+        minimum size=6.5mm, inner sep=0pt, font=\scriptsize] at (2, 3) {Б};
+  \node[circle, draw=accent, fill=accent!30!mixbg, line width=1pt,
+        minimum size=6.5mm, inner sep=0pt, font=\scriptsize] at (6, 5) {О1};
+  \node[circle, draw=accent, fill=accent!30!mixbg, line width=1pt,
+        minimum size=6.5mm, inner sep=0pt, font=\scriptsize] at (5, 1) {О2};
+
+  % --- Легенда ---
+  \begin{scope}[shift={(9.9, 5)}]
+    \fill[fg] (0, 0) circle (1.1mm);
+    \node[lbl, anchor=west] at (0.35, 0) {припас: собрать все};
+
+    \fill[accent] (0, -0.75) circle (1.9mm);
+    \draw[accent, line width=0.6pt] (0, -0.75) circle (3.1mm);
+    \node[lbl, anchor=west] at (0.35, -0.75) {энергайзер};
+
+    \draw[accentb, line width=1.3pt, densely dashed]
+      (-0.35, -1.85) rectangle (0.35, -1.15);
+    \node[lbl, anchor=west] at (0.5, -1.5) {выход};
+
+    \fill[accentb!18!mixbg] (-0.35, -2.6) rectangle (0.35, -1.9);
+    \draw[muted, line width=0.3pt] (-0.35, -2.6) rectangle (0.35, -1.9);
+    \node[text=accentb, font=\tiny] at (0.2, -2.5) {2};
+    \node[lbl, anchor=west, align=left] at (0.5, -2.25)
+         {пересечённая местность:\\заход стоит 2-3 такта};
+
+    \fill[fg!55!mixbg] (-0.35, -3.35) rectangle (0.35, -2.65);
+    \node[lbl, anchor=west] at (0.5, -3) {стена};
+  \end{scope}
+
+  \node[lbl, anchor=west, align=left] at (-0.6, -1.5)
+       {Беглец Б побеждает, если собрал все припасы и дошёл до выхода В.\\
+        Охотники О1 и О2 побеждают, если настигли его. Заход на\\
+        пересечённую клетку занимает несколько тактов - и охотникам\\
+        она обходится на такт дороже, чем беглецу.};
+
+\end{tikzpicture}

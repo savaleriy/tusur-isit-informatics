@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=12mm, y=12mm]
+
+  \node[lbl, anchor=west] at (0, 1.6) {$h(v) = v \bmod 6$};
+
+  % Корзины
+  \foreach \i in {0,...,5} {
+    \node[cell] at (\i, 0.5) {\i};
+  }
+
+  % Содержимое корзин: 22 mod 6 = 4, 5 mod 6 = 5, 11 mod 6 = 5
+  \node[cell, hi] at (4, -0.6) {22};
+  \node[cell, hi2] at (5, -0.6) {5};
+  \node[cell, hi2] at (5, -1.7) {11};
+  \draw[arr] (5, -1.0) -- (5, -1.35);
+
+  \node[lbl, anchor=west, align=left] at (0, -2.6)
+    {$22 \bmod 6 = 4$, поэтому 22 лежит в корзине 4\\[1mm]
+     коллизия: $5 \bmod 6 = 5$ и $11 \bmod 6 = 5$,\\
+     поэтому в корзине 5 лежит цепочка};
+
+\end{tikzpicture}

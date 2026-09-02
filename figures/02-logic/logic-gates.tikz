@@ -1,0 +1,30 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % --- NOT ---
+  \node[not gate US, draw=fg, fill=boxfill, thick] (n) at (0, 0) {};
+  \draw[wire] (n.input)  -- ++(-0.55, 0) node[left, lbl]  {$A$};
+  \draw[wire] (n.output) -- ++( 0.55, 0) node[right, lbl] {$\lnot A$};
+  \node[lbl, below=5mm of n] {NOT (НЕ)};
+
+  % --- AND ---
+  \node[and gate US, draw=fg, fill=boxfill, thick, logic gate inputs=nn] (a) at (3.4, 0) {};
+  \draw[wire] (a.input 1) -- ++(-0.85, 0) node[left, lbl] {$A$};
+  \draw[wire] (a.input 2) -- ++(-0.85, 0) node[left, lbl] {$B$};
+  \draw[wire] (a.output)  -- ++( 0.55, 0) node[right, lbl] {$A \land B$};
+  \node[lbl, below=5mm of a] {AND (И)};
+
+  % --- OR ---
+  \node[or gate US, draw=fg, fill=boxfill, thick, logic gate inputs=nn] (o) at (7.2, 0) {};
+  \draw[wire] (o.input 1) -- ++(-0.85, 0) node[left, lbl] {$A$};
+  \draw[wire] (o.input 2) -- ++(-0.85, 0) node[left, lbl] {$B$};
+  \draw[wire] (o.output)  -- ++( 0.55, 0) node[right, lbl] {$A \lor B$};
+  \node[lbl, below=5mm of o] {OR (ИЛИ)};
+
+  % --- XOR ---
+  \node[xor gate US, draw=fg, fill=boxfill, thick, logic gate inputs=nn] (x) at (11.0, 0) {};
+  \draw[wire] (x.input 1) -- ++(-0.7, 0) node[left, lbl] {$A$};
+  \draw[wire] (x.input 2) -- ++(-0.7, 0) node[left, lbl] {$B$};
+  \draw[wire] (x.output)  -- ++( 0.55, 0) node[right, lbl] {$A \oplus B$};
+  \node[lbl, below=5mm of x] {XOR (искл. ИЛИ)};
+
+\end{tikzpicture}

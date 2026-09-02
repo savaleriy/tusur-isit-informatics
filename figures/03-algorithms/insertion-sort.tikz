@@ -1,0 +1,41 @@
+\begin{tikzpicture}[x=10mm, y=12mm]
+
+  % Сортировка вставками [5, 2, 4, 1, 3]
+  % Слева от | --- уже отсортированная часть.
+
+  % после вставки 2
+  \node[cell, hi] (a0) at (0, 0) {2};
+  \node[cell, hi] (a1) at (1, 0) {5};
+  \node[cell] (a2) at (2, 0) {4};
+  \node[cell] (a3) at (3, 0) {1};
+  \node[cell] (a4) at (4, 0) {3};
+  \node[lbl, anchor=east] at (-0.65, 0) {вставили 2};
+
+  % после вставки 4
+  \node[cell, hi] (b0) at (0, -1.2) {2};
+  \node[cell, hi] (b1) at (1, -1.2) {4};
+  \node[cell, hi] (b2) at (2, -1.2) {5};
+  \node[cell] (b3) at (3, -1.2) {1};
+  \node[cell] (b4) at (4, -1.2) {3};
+  \node[lbl, anchor=east] at (-0.65, -1.2) {вставили 4};
+
+  % после вставки 1
+  \node[cell, hi] (c0) at (0, -2.4) {1};
+  \node[cell, hi] (c1) at (1, -2.4) {2};
+  \node[cell, hi] (c2) at (2, -2.4) {4};
+  \node[cell, hi] (c3) at (3, -2.4) {5};
+  \node[cell] (c4) at (4, -2.4) {3};
+  \node[lbl, anchor=east] at (-0.65, -2.4) {вставили 1};
+
+  % после вставки 3
+  \node[cell, hi] (d0) at (0, -3.6) {1};
+  \node[cell, hi] (d1) at (1, -3.6) {2};
+  \node[cell, hi] (d2) at (2, -3.6) {3};
+  \node[cell, hi] (d3) at (3, -3.6) {4};
+  \node[cell, hi] (d4) at (4, -3.6) {5};
+  \node[lbl, anchor=east] at (-0.65, -3.6) {вставили 3};
+
+  \node[lbl, anchor=west, align=left] at (5.6, -1.0)
+    {слева --- отсортированная часть;\\берём следующий элемент и вставляем\\его на место, сдвигая остальные};
+
+\end{tikzpicture}

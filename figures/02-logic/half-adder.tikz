@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[xor gate US, draw=fg, fill=boxfill, thick, logic gate inputs=nn] (x) at (2.6,  0.55) {};
+  \node[and gate US, draw=fg, fill=boxfill, thick, logic gate inputs=nn] (a) at (2.6, -1.05) {};
+
+  % Входы
+  \coordinate (A) at (0,  0.95);
+  \coordinate (B) at (0,  0.15);
+  \node[lbl, left] at (A) {$A$};
+  \node[lbl, left] at (B) {$B$};
+
+  \draw[wire] (A) -- (x.input 1);
+  \draw[wire] (B) -- (x.input 2);
+
+  \draw[wire] (0.55, 0.95) -- (0.55, -0.65) -- (a.input 1);
+  \draw[wire] (1.05, 0.15) -- (1.05, -1.45) -- (a.input 2);
+  \fill[fg] (0.55, 0.95) circle (1.1pt);
+  \fill[fg] (1.05, 0.15) circle (1.1pt);
+
+  % Выходы
+  \draw[wire] (x.output) -- ++(0.9, 0) node[right, lbl] {$S$ --- сумма};
+  \draw[wire] (a.output) -- ++(0.9, 0) node[right, lbl] {$C$ --- перенос};
+
+  \node[lbl, below=3mm of a] {AND};
+  \node[lbl, above=3mm of x] {XOR};
+
+  % Таблица истинности
+  \begin{scope}[shift={(7.6, 1.1)}, x=8mm, y=-6.5mm]
+    \node[lbl] at (0, 0) {$A$};
+    \node[lbl] at (1, 0) {$B$};
+    \node[lbl] at (2.2, 0) {$C$};
+    \node[lbl] at (3.2, 0) {$S$};
+    \draw[draw=muted] (-0.45, 0.4) -- (3.65, 0.4);
+    \draw[draw=muted] (1.6, -0.35) -- (1.6, 4.4);
+    \foreach \a/\b/\c/\s [count=\r from 1] in {0/0/0/0, 0/1/0/1, 1/0/0/1, 1/1/1/0} {
+      \node[lbl] at (0, \r) {\a};
+      \node[lbl] at (1, \r) {\b};
+      \node[lbl] at (2.2, \r) {\c};
+      \node[lbl] at (3.2, \r) {\s};
+    }
+  \end{scope}
+
+\end{tikzpicture}

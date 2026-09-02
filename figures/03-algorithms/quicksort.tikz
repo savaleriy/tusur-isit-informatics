@@ -1,0 +1,35 @@
+\begin{tikzpicture}[x=9mm, y=8mm]
+
+  % Исходный массив
+  \node[lbl, anchor=east] at (-0.6,0) {массив:};
+  \foreach \x [count=\i from 1] in {3, 7, 8, 5, 2, 1, 9, 4} {
+    \pgfmathsetmacro\j{\i - 1}
+    \node[cell, minimum width=8mm, minimum height=7mm] at (\j, 0) {\x};
+  }
+  % опорный элемент --- 5 (индекс 4)
+  \node[hi, minimum width=8mm, minimum height=7mm] at (3, 0) {5};
+  \node[lbl] at (3, 0.55) {опорный};
+
+  % Стрелки от опорного к двум кучам
+  \draw[arrmuted] (1.5, -0.5) .. controls (1.5, -1.3) and (0.6, -1.8) .. (0.6, -2.2);
+  \draw[arrmuted] (5.5, -0.5) .. controls (5.5, -1.3) and (6.4, -1.8) .. (6.4, -2.2);
+
+  % Левая куча: меньше опорного
+  \node[lbl, anchor=west] at (0, -1.6) {меньше};
+  \foreach \x [count=\i from 1] in {3, 2, 1, 4} {
+    \pgfmathsetmacro\j{\i - 1}
+    \node[cell, minimum width=8mm, minimum height=7mm] at (\j, -2.7) {\x};
+  }
+
+  % Правая куча: больше опорного
+  \node[lbl, anchor=west] at (5.0, -1.6) {больше};
+  \foreach \x [count=\i from 1] in {7, 8, 9} {
+    \pgfmathsetmacro\j{\i - 1}
+    \node[cell, minimum width=8mm, minimum height=7mm] at (5.0 + \j, -2.7) {\x};
+  }
+
+  % Сборка снизу
+  \node[lbl, anchor=west, align=left] at (2.0, -3.6)
+    {меньшие $+$ опорный $+$ большие\\даёт отсортированный массив};
+
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=12mm, y=12mm]
+
+  % Массив
+  \node[lbl, anchor=east] at (-0.65, 0) {массив};
+  \node[cell] at (0, 0) {7};
+  \node[cell] at (1, 0) {3};
+  \node[cell] at (2, 0) {5};
+  \node[cell] at (3, 0) {1};
+  \node[lbl] at (1.5, 0.55) {непрерывный блок памяти};
+  \node[lbl] at (0, -0.55) {$s$};
+  \node[lbl] at (1, -0.55) {$s{+}b$};
+  \node[lbl] at (2, -0.55) {$s{+}2b$};
+  \node[lbl] at (3, -0.55) {$s{+}3b$};
+
+  % Связный список
+  \node[lbl, anchor=east] at (-0.65, -3) {список};
+  \node[cell] (n1) at (0, -3) {7};
+  \node[cell] (n2) at (1.8, -2.1) {3};
+  \node[cell] (n3) at (3.6, -3) {5};
+  \node[cell] (n4) at (5.4, -2.1) {1};
+  \draw[arr] (n1) -- (n2);
+  \draw[arr] (n2) -- (n3);
+  \draw[arr] (n3) -- (n4);
+  \node[lbl] at (2.7, -3.9) {разрозненные ячейки, связанные указателями};
+
+\end{tikzpicture}

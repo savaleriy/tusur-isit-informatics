@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=13mm, y=-14mm,
+  tnode/.style={circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm},
+  rep/.style={circle, draw=accent, fill=boxfill, text=accent, line width=1.2pt, inner sep=1pt, minimum size=8mm}]
+
+  \node[tnode] (f5) at (2, 0) {fib(5)};
+  \node[tnode] (f4) at (0.7, 1) {fib(4)};
+  \node[rep]   (f3r) at (3.3, 1) {fib(3)};
+  \node[rep]   (f3l) at (0.2, 2) {fib(3)};
+  \node[rep]   (f2a) at (1.2, 2) {fib(2)};
+  \node[rep]   (f2b) at (2.8, 2) {fib(2)};
+  \node[tnode] (f1) at (3.8, 2) {fib(1)};
+
+  \draw[wire] (f5) -- (f4);
+  \draw[wire] (f5) -- (f3r);
+  \draw[wire] (f4) -- (f3l);
+  \draw[wire] (f4) -- (f2a);
+  \draw[wire] (f3r) -- (f2b);
+  \draw[wire] (f3r) -- (f1);
+
+  \node[lbl, anchor=west, align=left] at (4.8, 0.5)
+    {одни и те же значения\\считаются многократно\\[1mm]
+     (акцентом --- повторы)};
+
+\end{tikzpicture}

@@ -1,0 +1,92 @@
+% Общая преамбула для всех иллюстраций курса.
+% Подставляется автоматически скриптом build_figures.py --- в самих
+% .tikz-файлах пишется только содержимое tikzpicture.
+%
+% Цвета заданы через макросы, чтобы одна и та же картинка собиралась
+% в двух вариантах: для светлой и для тёмной темы сайта.
+%
+%   \fg      --- основной цвет: линии, текст, стрелки
+%   \muted   --- приглушённый цвет: вспомогательные подписи, пунктир
+%   \boxfill --- заливка блоков
+%   \accent  --- акцент: то, на что смотрим
+%   \accentb --- второй акцент
+\documentclass[tikz,border=6pt]{standalone}
+
+\usepackage{amsmath}
+\usepackage{fontspec}
+\setmainfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+\usepackage{unicode-math}
+\setmathfont{DejaVu Math TeX Gyre}
+
+\usetikzlibrary{
+  arrows.meta,
+  positioning,
+  shapes.geometric,
+  shapes.misc,
+  calc,
+  fit,
+  backgrounds,
+  decorations.pathreplacing,
+  decorations.pathmorphing,
+  matrix,
+  chains,
+  shapes.gates.logic.US,
+  positioning
+}
+
+% --- Палитра: подставляется скриптом ---------------------------------------
+%%PALETTE%%
+
+% --- Общие стили -----------------------------------------------------------
+\tikzset{
+  every picture/.style={
+    line width=0.7pt,
+    >={Stealth[round, length=2.6mm, width=2mm]},
+    font=\small,
+    draw=fg,
+    text=fg,
+  },
+  box/.style={
+    draw=fg, fill=boxfill, rounded corners=2pt,
+    minimum height=8mm, minimum width=8mm,
+    inner sep=3pt, text=fg, align=center,
+  },
+  cell/.style={
+    draw=fg, fill=boxfill,
+    minimum height=8mm, minimum width=8mm,
+    inner sep=2pt, text=fg, align=center,
+  },
+  ghost/.style={
+    draw=muted, fill=none, densely dashed, rounded corners=2pt,
+    minimum height=8mm, minimum width=8mm, text=muted, align=center,
+  },
+  hi/.style={
+    draw=accent, fill=accent!22!mixbg, line width=1pt, text=fg,
+  },
+  hi2/.style={
+    draw=accentb, fill=accentb!22!mixbg, line width=1pt, text=fg,
+  },
+  lbl/.style={text=muted, font=\scriptsize, align=center},
+  proc/.style={
+    draw=fg, fill=boxfill, rounded corners=1pt,
+    minimum height=9mm, minimum width=26mm, inner sep=3pt, align=center,
+  },
+  dec/.style={
+    draw=fg, fill=boxfill, diamond, aspect=2.2,
+    inner sep=1pt, align=center, minimum width=24mm,
+  },
+  term/.style={
+    draw=fg, fill=boxfill, rounded rectangle,
+    minimum height=8mm, minimum width=20mm, inner sep=4pt, align=center,
+  },
+  arr/.style={->, draw=fg},
+  arrmuted/.style={->, draw=muted, densely dashed},
+  arracc/.style={->, draw=accent, line width=1pt},
+  gate/.style={draw=fg, fill=boxfill, logic gate inputs=nn, thick},
+  wire/.style={draw=fg, line width=0.7pt},
+}
+
+\begin{document}
+%%BODY%%
+\end{document}

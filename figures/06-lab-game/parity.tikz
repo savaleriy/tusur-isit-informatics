@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=7mm, y=-7mm]
+
+  % Шахматная раскраска
+  \foreach \c in {0,...,9}
+    \foreach \r in {0,...,9} {
+      \pgfmathtruncatemacro{\sum}{mod(\c + \r, 2)}
+      \ifnum\sum=0
+        \node[cell, hi, minimum size=6.5mm, inner sep=0pt] at (\c, \r) {};
+      \else
+        \node[cell, minimum size=6.5mm, inner sep=0pt] at (\c, \r) {};
+      \fi
+    }
+
+  % Двухпалубный корабль в двух положениях
+  \draw[accentb, line width=1.4pt, rounded corners=1pt]
+       (2.62, 5.62) rectangle (4.38, 6.38);
+  \draw[accentb, line width=1.4pt, rounded corners=1pt]
+       (6.62, 1.62) rectangle (7.38, 3.38);
+
+  \node[lbl, anchor=west, align=left] at (10.6, 1.5)
+       {Любой корабль длины 2\\накрывает ровно одну\\закрашенную клетку -\\как его ни поверни.};
+  \node[lbl, anchor=west, align=left] at (10.6, 5)
+       {Значит, чтобы найти все\\корабли, достаточно бить\\только по закрашенным:\\50 клеток вместо 100.};
+  \node[lbl, anchor=west, align=left] at (10.6, 8.5)
+       {Добивать корабль после\\попадания уже можно\\по любым соседям.};
+
+\end{tikzpicture}

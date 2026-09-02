@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=15mm, y=12mm]
+
+  % До вставки
+  \node[lbl, anchor=east] at (-0.2, 0) {было:};
+  \node[cell] (A1) at (0.5, 0) {A};
+  \node[cell] (B1) at (1.9, 0) {B};
+  \node[cell] (C1) at (3.3, 0) {C};
+  \draw[arr] (A1) -- (B1);
+  \draw[arr] (B1) -- (C1);
+
+  % После вставки X между A и B
+  \node[lbl, anchor=east] at (-0.2, -1.5) {стало:};
+  \node[cell] (A2) at (0.5, -1.5) {A};
+  \node[cell, hi2] (X) at (1.7, -1.5) {X};
+  \node[cell] (B2) at (2.9, -1.5) {B};
+  \node[cell] (C2) at (4.3, -1.5) {C};
+  \draw[arracc] (A2) -- (X);
+  \draw[arracc] (X) -- (B2);
+  \draw[arr] (B2) -- (C2);
+
+  \node[lbl, anchor=west, align=left] at (5.3, -0.75)
+    {достаточно поменять\\два указателя};
+
+\end{tikzpicture}

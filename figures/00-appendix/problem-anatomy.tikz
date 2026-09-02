@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  \node[box, minimum width=30mm, minimum height=12mm, align=center] (given) at (0, 0)
+       {\textbf{Что дано}\\[1mm] числа, строки,\\ограничения};
+  \node[box, hi2, minimum width=30mm, minimum height=12mm, align=center] (want) at (7.2, 0)
+       {\textbf{Что найти}\\[1mm] какой ответ\\и в каком виде};
+
+  \node[box, hi, minimum width=42mm, minimum height=11mm, align=center] (link) at (3.6, -2.6)
+       {\textbf{Как они связаны}\\[1mm] формула, правило, алгоритм};
+
+  \draw[arr] (given.east) -- (want.west);
+  \node[lbl] at (3.6, 1.35) {пропасть, которую надо перейти};
+
+  \draw[arracc] (given.south) -- (link.west);
+  \draw[arracc] (link.east) -- (want.south);
+
+  \node[lbl, anchor=west, align=left] at (-2.6, -4.6)
+       {Пока вы не можете назвать все три блока своими словами - задача не понята.\\
+        Не начинайте писать код: писать нечего.};
+
+\end{tikzpicture}

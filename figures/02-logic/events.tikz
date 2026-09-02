@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % --- Несовместные события ---
+  \draw[draw=muted, rounded corners=2pt] (-1.7, -1.5) rectangle (3.5, 1.7);
+  \node[lbl, anchor=north west] at (-1.65, 1.62) {все исходы};
+
+  \fill[accent, opacity=0.22] (0, 0) circle (1.05);
+  \draw[draw=accent, line width=1pt] (0, 0) circle (1.05);
+  \node[text=fg] at (0, 0) {$A$};
+
+  \fill[accentb, opacity=0.22] (2.3, 0) circle (0.85);
+  \draw[draw=accentb, line width=1pt] (2.3, 0) circle (0.85);
+  \node[text=fg] at (2.3, 0) {$B$};
+
+  \node[lbl, align=center] at (0.9, -2.15) {\textbf{Несовместные}\\общих исходов нет};
+  \node[text=fg, font=\small] at (0.9, -3.0) {$P(A \lor B) = P(A) + P(B)$};
+
+  % --- Совместные события ---
+  \begin{scope}[shift={(7.5, 0)}]
+    \draw[draw=muted, rounded corners=2pt] (-2.0, -1.5) rectangle (2.6, 1.7);
+    \node[lbl, anchor=north west] at (-1.95, 1.62) {все исходы};
+
+    \fill[accent, opacity=0.22] (-0.45, 0) circle (1.05);
+    \draw[draw=accent, line width=1pt] (-0.45, 0) circle (1.05);
+    \fill[accentb, opacity=0.22] (0.75, 0) circle (0.95);
+    \draw[draw=accentb, line width=1pt] (0.75, 0) circle (0.95);
+
+    \node[text=fg] at (-1.05, 0) {$A$};
+    \node[text=fg] at (1.35, 0) {$B$};
+    \node[lbl, align=center] at (0.15, -0.02) {оба};
+
+    \node[lbl, align=center] at (0.3, -2.15) {\textbf{Совместные}\\есть общие исходы};
+    \node[text=fg, font=\small] at (0.3, -3.0) {$P(A \lor B) = P(A) + P(B) - P(A \land B)$};
+  \end{scope}
+
+\end{tikzpicture}

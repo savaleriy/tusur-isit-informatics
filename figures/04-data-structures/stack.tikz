@@ -1,0 +1,20 @@
+\begin{tikzpicture}[x=16mm, y=11mm]
+
+  % Стек (LIFO): кладём и снимаем сверху
+  \node[cell, minimum width=16mm] (bot) at (0, -1.4) {7};
+  \node[cell, minimum width=16mm] (mid) at (0, -0.7) {3};
+  \node[cell, minimum width=16mm] (top) at (0, 0) {9};
+  \node[lbl, anchor=south] at (0, 0.6) {вершина};
+
+  % push
+  \node[box, minimum width=15mm] (push) at (2.4, 0.2) {push};
+  \draw[arr] (push) -- (top);
+
+  % pop
+  \node[box, minimum width=15mm] (pop) at (-2.4, 0.2) {pop};
+  \draw[arr] (top) -- (pop);
+
+  \node[lbl, anchor=west, align=left] at (4.0, -0.7)
+    {последним вошёл ---\\первым вышел};
+
+\end{tikzpicture}

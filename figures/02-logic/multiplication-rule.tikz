@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=13mm, y=-9mm]
+
+  \node[box, hi] (root) at (0, 1.5) {старт};
+
+  % Первый выбор: 3 варианта
+  \foreach \v [count=\i from 0] in {красный, синий, белый} {
+    \node[box, minimum width=17mm] (a\i) at (1.6, \i) {\v};
+    \draw[arr] (root) -- (a\i);
+  }
+  \node[lbl, align=center] at (1.6, -1.1) {футболка\\\textbf{3 варианта}};
+
+  % Второй выбор: 2 варианта на каждый
+  \foreach \i in {0, 1, 2} {
+    \pgfmathsetmacro{\ya}{\i * 2 - 0.5}
+    \pgfmathsetmacro{\yb}{\i * 2 + 0.5}
+    \node[box, hi2, minimum width=15mm] (b\i a) at (3.6, \ya) {джинсы};
+    \node[box, hi2, minimum width=15mm] (b\i b) at (3.6, \yb) {шорты};
+    \draw[arr] (a\i) -- (b\i a);
+    \draw[arr] (a\i) -- (b\i b);
+  }
+  \node[lbl, align=center] at (3.6, -1.6) {низ\\\textbf{2 варианта}};
+
+  \draw[decorate, decoration={brace, amplitude=2mm}, draw=muted]
+       (4.45, 4.5) -- (4.45, -0.5)
+       node[midway, right=3mm, lbl, align=left] {$3 \times 2 = 6$\\различных\\комплектов};
+
+\end{tikzpicture}

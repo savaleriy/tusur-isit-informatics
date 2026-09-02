@@ -1,0 +1,29 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % Загон
+  \fill[boxfill] (0, 0) rectangle (6, 3.4);
+  \draw[draw=fg, line width=1pt] (0, 0) rectangle (6, 3.4);
+  \draw[draw=accent, line width=1.4pt] (3, 0) -- (3, 3.4);
+
+  \node[lbl] at (1.5, 1.7) {овцы};
+  \node[lbl] at (4.5, 1.7) {козы};
+
+  % Размеры
+  \draw[<->, draw=muted] (0, -0.55) -- (6, -0.55)
+        node[pos=0.22, below, lbl] {$w$};
+  \draw[<->, draw=muted] (6.55, 0) -- (6.55, 3.4)
+        node[midway, right, lbl] {$l$};
+  \node[text=accent, font=\scriptsize, anchor=west] at (3.15, -0.95) {перегородка длины $l$};
+  \draw[draw=accent, densely dashed] (3, -0.15) -- (3, -0.85);
+
+  % Подсчёт проволоки
+  \node[anchor=west, align=left, text=fg, font=\small] at (7.6, 2.4)
+       {Вся проволока идёт на четыре стороны\\и одну перегородку:};
+  \node[anchor=west, text=fg] at (7.6, 1.4)
+       {$2w + 3l = 100$};
+  \node[anchor=west, align=left, text=fg, font=\small] at (7.6, 0.6)
+       {Площадь, которую надо сделать\\максимальной:};
+  \node[anchor=west, text=fg] at (7.6, -0.3)
+       {$A = w \cdot l$};
+
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=10mm, y=12mm]
+
+  % Ищем 9 в отсортированном списке.
+
+  % Шаг 1: весь диапазон, середина 7
+  \foreach \i/\v [count=\c from 0] in {1,3,5,7,9,11,13,15} {
+    \node[cell, minimum width=9mm, minimum height=7mm] at (\c, 0) {\v};
+  }
+  \node[hi, minimum width=9mm, minimum height=7mm] at (3, 0) {7};
+  \node[lbl, anchor=west] at (8.5, 0.35) {середина 7};
+  \node[lbl, anchor=west] at (8.5, -0.35) {$9 > 7$, идём вправо};
+
+  % Шаг 2: правая половина, середина 11
+  \foreach \i/\v [count=\c from 0] in {1,3,5,7,9,11,13,15} {
+    \pgfmathsetmacro\cc{\c}
+    \node[ghost, minimum width=9mm, minimum height=7mm] at (\cc, -1.4) {\v};
+  }
+  \node[cell, minimum width=9mm, minimum height=7mm] at (4, -1.4) {9};
+  \node[cell, minimum width=9mm, minimum height=7mm] at (6, -1.4) {13};
+  \node[cell, minimum width=9mm, minimum height=7mm] at (7, -1.4) {15};
+  \node[hi, minimum width=9mm, minimum height=7mm] at (5, -1.4) {11};
+  \node[lbl, anchor=west] at (8.5, -1.05) {середина 11};
+  \node[lbl, anchor=west] at (8.5, -1.75) {$9 < 11$, идём влево};
+
+  % Шаг 3: нашли
+  \foreach \i/\v [count=\c from 0] in {1,3,5,7,9,11,13,15} {
+    \pgfmathsetmacro\cc{\c}
+    \node[ghost, minimum width=9mm, minimum height=7mm] at (\cc, -2.8) {\v};
+  }
+  \node[hi2, minimum width=9mm, minimum height=7mm] at (4, -2.8) {9};
+  \node[lbl, anchor=west] at (8.5, -2.8) {$9 = 9$, нашли!};
+
+\end{tikzpicture}

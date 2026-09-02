@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=17mm, y=16mm,
+  tnode/.style={circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm},
+  leaf/.style={circle, draw=accent, fill=boxfill, text=accent, inner sep=1pt, minimum size=8mm}]
+
+  \node[tnode] (root) at (0, 2) {4};
+  \node[leaf] (t) at (-1.6, 1) {$t$:2};
+  \node[tnode] (il) at (1.6, 1) {2};
+  \node[leaf] (i) at (0.7, 0) {$i$:1};
+  \node[leaf] (l) at (2.5, 0) {$l$:1};
+
+  \draw[wire] (root) -- (t) node[midway, left, lbl] {0};
+  \draw[wire] (root) -- (il) node[midway, right, lbl] {1};
+  \draw[wire] (il) -- (i) node[midway, left, lbl] {0};
+  \draw[wire] (il) -- (l) node[midway, right, lbl] {1};
+
+  \node[lbl, anchor=west, align=left] at (4.0, 1)
+    {$t \to 0$\\[1mm]
+     $i \to 10$\\[1mm]
+     $l \to 11$};
+
+  \node[lbl, anchor=west] at (4.0, -0.3) {\texttt{tilt} $\to$ 010110};
+
+\end{tikzpicture}

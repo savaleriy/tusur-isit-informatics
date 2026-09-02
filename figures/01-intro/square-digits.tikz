@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=15mm, y=-13mm]
+
+  \node[lbl, anchor=east] at (-0.4, 0) {число};
+  \node[lbl, anchor=east] at (-0.4, 1) {каждую цифру\\в квадрат};
+  \node[lbl, anchor=east] at (-0.4, 2) {склеиваем};
+
+  \foreach \d [count=\i from 0] in {9, 1, 1, 9}
+    \node[box, minimum width=12mm] (d\i) at (\i, 0) {\texttt{\d}};
+
+  \foreach \sq [count=\i from 0] in {81, 1, 1, 81}
+    \node[box, hi, minimum width=12mm] (q\i) at (\i, 1) {\texttt{\sq}};
+
+  \foreach \i in {0,...,3}
+    \draw[arr] (d\i) -- (q\i);
+
+  \node[box, hi2, minimum width=54mm] (res) at (1.5, 2) {\texttt{811181}};
+
+  \foreach \i in {0,...,3}
+    \draw[arrmuted] (q\i) -- (res);
+
+  \node[lbl, anchor=west] at (2.65, 0) {\texttt{9119}};
+  \node[lbl, anchor=west] at (2.65, 2) {результат};
+
+\end{tikzpicture}

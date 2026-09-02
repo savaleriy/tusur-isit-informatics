@@ -1,0 +1,39 @@
+\begin{tikzpicture}[x=9mm, y=7.5mm]
+
+  % Оси
+  \draw[arr] (0,0) -- (7.4,0) node[below left=1mm and 0mm] {размер входных данных $n$};
+  \draw[arr] (0,0) -- (0,7.0) node[above right=0mm and -12mm] {число операций};
+
+  % O(1) --- плоская линия
+  \draw[muted, thick, dotted] (0,0.35) -- (6.3,0.35);
+  \node[lbl, anchor=west, text=fg] at (6.4,0.35) {$O(1)$};
+
+  % O(log n) --- растёт и выходит на плато
+  \draw[thick] plot[smooth] coordinates
+    {(0,0.10) (1,0.80) (2,1.15) (3,1.40) (4,1.55) (5,1.66) (6,1.74)};
+  \node[lbl, anchor=west, text=fg] at (6.15,1.55) {$O(\log n)$};
+
+  % O(n) --- прямая
+  \draw[thick] (0,0) -- (6,2.6);
+  \node[lbl, anchor=west, text=fg] at (6.15,2.7) {$O(n)$};
+
+  % O(n log n)
+  \draw[thick] plot[smooth] coordinates
+    {(0,0) (1,0.55) (2,1.35) (3,2.30) (4,3.40) (5,4.60)};
+  \node[lbl, anchor=west, text=fg] at (5.15,4.55) {$O(n \log n)$};
+
+  % O(n^2) --- парабола
+  \draw[accent, thick] plot[smooth] coordinates
+    {(0,0) (1,0.85) (2,1.90) (3,3.20) (4,4.80)};
+  \node[lbl, text=accent, anchor=south] at (4.05,5.05) {$O(n^2)$};
+
+  % O(2^n) --- стена справа
+  \draw[accentb, thick] plot[smooth] coordinates
+    {(0,0.02) (2,0.10) (2.9,0.25) (3.3,0.70) (3.5,1.90) (3.62,3.80) (3.70,6.40)};
+  \node[lbl, text=accentb, anchor=south west] at (3.15,6.45) {$O(2^n)$};
+
+  % подпись про факториал --- в пустой левый верхний угол
+  \node[lbl, anchor=north west, align=left] at (0.35,6.6)
+    {$O(n!)$ растёт ещё быстрее:\\его кривая прижата к оси\\ещё левее};
+
+\end{tikzpicture}

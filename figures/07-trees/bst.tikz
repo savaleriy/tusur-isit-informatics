@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=15mm, y=15mm,
+  tnode/.style={circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm},
+  hnode/.style={circle, draw=accent, fill=boxfill, text=accent, line width=1.2pt, inner sep=1pt, minimum size=8mm}]
+
+  \node[hnode] (n10) at (0, 2) {10};
+  \node[hnode] (n5)  at (-1.5, 1) {5};
+  \node[tnode] (n20) at (1.5, 1) {20};
+  \node[tnode] (n3)  at (-2.2, 0) {3};
+  \node[hnode] (n7)  at (-0.8, 0) {7};
+  \node[tnode] (n15) at (1.0, 0) {15};
+
+  \draw[wire] (n10) -- (n5);
+  \draw[wire] (n10) -- (n20);
+  \draw[wire] (n5) -- (n3);
+  \draw[wire] (n5) -- (n7);
+  \draw[wire] (n20) -- (n15);
+
+  % искомый элемент 8 - пустое место справа от 7
+  \node[ghost, circle] (g8) at (-0.15, -1) {8?};
+  \draw[arrmuted] (n7) -- (g8);
+
+  \node[lbl, anchor=west, align=left] at (2.2, -0.5)
+    {поиск 7: 10 $\to$ 5 $\to$ 7\\[1mm]
+     поиск 8: 10 $\to$ 5 $\to$ пустое место};
+
+\end{tikzpicture}

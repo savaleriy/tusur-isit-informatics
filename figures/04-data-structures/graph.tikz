@@ -1,0 +1,15 @@
+\begin{tikzpicture}[x=15mm, y=15mm]
+
+  \node[circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm] (A) at (0, 1) {A};
+  \node[circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm] (B) at (1.7, 1.7) {B};
+  \node[circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm] (C) at (1.7, 0) {C};
+  \node[circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm] (D) at (3.2, 0.85) {D};
+
+  \draw[wire] (A) -- (B);
+  \draw[wire] (A) -- (C);
+  \draw[wire] (B) -- (D);
+  \draw[wire] (C) -- (D);
+
+  \node[lbl] at (1.6, -0.7) {вершины и рёбра};
+
+\end{tikzpicture}

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[x=10mm, y=-9mm]
+
+  \node[box, hi2, minimum width=32mm, minimum height=11mm, align=center] (stuck) at (0, 0)
+       {\textbf{Идеи нет}};
+
+  \foreach \i/\name/\hint in {
+    0/{Упростить}/{решить для $n=1$, $n=2$},
+    1/{Частный случай}/{взять конкретные числа},
+    2/{Аналогия}/{где я видел похожее?},
+    3/{Обратный ход}/{идти от ответа к данным},
+    4/{Отбросить условие}/{что станет проще?},
+    5/{Разбить}/{решить половину задачи}} {
+    \node[box, minimum width=36mm, minimum height=9mm, anchor=west] (h\i) at (3.2, \i * 1.15 - 2.85) {\textbf{\name}};
+    \node[lbl, anchor=west] at (7.3, \i * 1.15 - 2.85) {\hint};
+    \draw[arr] (stuck.east) -- (h\i.west);
+  }
+
+\end{tikzpicture}

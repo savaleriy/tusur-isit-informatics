@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=7mm, y=-7mm]
+
+  % Сетка 10 на 10
+  \foreach \c in {0,...,9}
+    \foreach \r in {0,...,9}
+      \node[cell, minimum size=6.5mm, inner sep=0pt] at (\c, \r) {};
+
+  % Координаты
+  \foreach \c [count=\i from 0] in {A,B,C,D,E,F,G,H,I,J}
+    \node[lbl] at (\i, -0.85) {\c};
+  \foreach \r in {0,...,9} {
+    \pgfmathtruncatemacro{\num}{\r + 1}
+    \node[lbl] at (-0.85, \r) {\num};
+  }
+
+  % Флот: четырёхпалубный, два трёхпалубных
+  \foreach \c/\r in {1/1, 2/1, 3/1, 4/1}
+    \node[cell, hi, minimum size=6.5mm, inner sep=0pt] at (\c, \r) {};
+  \foreach \c/\r in {7/2, 7/3, 7/4}
+    \node[cell, hi, minimum size=6.5mm, inner sep=0pt] at (\c, \r) {};
+  \foreach \c/\r in {2/6, 3/6}
+    \node[cell, hi, minimum size=6.5mm, inner sep=0pt] at (\c, \r) {};
+  \node[cell, hi, minimum size=6.5mm, inner sep=0pt] at (5, 8) {};
+
+  % Попадания
+  \foreach \c/\r in {2/1, 3/1, 7/3} {
+    \draw[accentb, line width=1pt] (\c-0.22, \r-0.22) -- (\c+0.22, \r+0.22);
+    \draw[accentb, line width=1pt] (\c-0.22, \r+0.22) -- (\c+0.22, \r-0.22);
+  }
+  % Промахи
+  \foreach \c/\r in {0/4, 5/2, 8/7, 3/8, 6/6, 1/9}
+    \fill[muted] (\c, \r) circle (0.9mm);
+
+  \node[lbl, anchor=west, align=left] at (10.8, 1)
+       {\textbf{корабль}\\палубы флота};
+  \node[lbl, anchor=west, align=left] at (10.8, 3.5)
+       {\textbf{попадание}\\крест};
+  \node[lbl, anchor=west, align=left] at (10.8, 6)
+       {\textbf{промах}\\точка};
+  \node[lbl, anchor=west, align=left] at (10.8, 8.5)
+       {показана часть флота;\\полный состав - в правилах};
+
+\end{tikzpicture}

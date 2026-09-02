@@ -1,0 +1,31 @@
+\begin{tikzpicture}[x=17mm, y=16mm,
+  tnode/.style={circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm}]
+
+  % ДО поворота: B --- ПРАВЫЙ потомок A
+  \node[tnode] (a1) at (0, 1.6) {A};
+  \node[tnode] (b1) at (0.8, 0.4) {B};
+  \node[tnode] (x1) at (0.2, -0.8) {x};
+  \node[tnode] (y1) at (1.4, -0.8) {y};
+  \draw[wire] (a1) -- (b1);
+  \draw[wire] (b1) -- (x1);
+  \draw[wire] (b1) -- (y1);
+  \node[lbl] at (0.5, 2.4) {до поворота};
+
+  % стрелка
+  \draw[arracc] (2.2, 0.4) -- (3.0, 0.4);
+
+  % ПОСЛЕ поворота: x переходит в ПРАВОЕ поддерево A
+  \node[tnode] (b2) at (4.6, 1.6) {B};
+  \node[tnode] (a2) at (3.8, 0.4) {A};
+  \node[tnode] (y2) at (5.4, 0.4) {y};
+  \node[tnode] (x2) at (4.4, -0.8) {x};
+  \draw[wire] (b2) -- (a2);
+  \draw[wire] (b2) -- (y2);
+  \draw[wire] (a2) -- (x2);
+  \node[lbl] at (4.6, 2.4) {после поворота};
+
+  \node[lbl, align=center] at (2.6, -1.7)
+    {левый поворот: B становится корнем, A --- его левым потомком,\\
+     а x переезжает из левого поддерева B в правое поддерево A};
+
+\end{tikzpicture}

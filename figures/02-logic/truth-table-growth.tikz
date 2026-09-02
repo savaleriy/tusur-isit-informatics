@@ -1,0 +1,46 @@
+\begin{tikzpicture}[x=10mm, y=-6mm]
+
+  % 1 переменная
+  \node[lbl] at (0, -2.0) {\textbf{1 переменная}};
+  \node[lbl] at (0, -0.85) {$A$};
+  \node[cell, hi, minimum width=7mm, minimum height=5mm] at (0, 0) {0};
+  \node[cell, hi, minimum width=7mm, minimum height=5mm] at (0, 1) {1};
+  \node[lbl] at (0, 2.2) {2 строки};
+
+  \draw[arracc] (0.65, 0.5) -- (1.35, 0.5);
+
+  % 2 переменные
+  \node[lbl] at (2.4, -2.0) {\textbf{2 переменные}};
+  \node[lbl] at (2.0, -0.85) {$A$};
+  \node[lbl] at (2.8, -0.85) {$B$};
+  \foreach \b [count=\r from 0] in {0, 1, 0, 1} {
+    \node[cell, minimum width=7mm, minimum height=5mm] at (2.8, \r) {\b};
+  }
+  \node[cell, hi, minimum width=7mm, minimum height=5mm] at (2.0, 0) {0};
+  \node[cell, hi, minimum width=7mm, minimum height=5mm] at (2.0, 1) {0};
+  \node[cell, hi2, minimum width=7mm, minimum height=5mm] at (2.0, 2) {1};
+  \node[cell, hi2, minimum width=7mm, minimum height=5mm] at (2.0, 3) {1};
+  \node[lbl] at (2.4, 4.2) {4 строки};
+
+  \draw[arracc] (3.45, 1.5) -- (4.15, 1.5);
+
+  % 3 переменные
+  \node[lbl] at (5.6, -2.0) {\textbf{3 переменные}};
+  \node[lbl] at (4.8, -0.85) {$A$};
+  \node[lbl] at (5.6, -0.85) {$B$};
+  \node[lbl] at (6.4, -0.85) {$C$};
+  \foreach \c [count=\r from 0] in {0, 1, 0, 1, 0, 1, 0, 1}
+    \node[cell, minimum width=7mm, minimum height=5mm] at (6.4, \r) {\c};
+  \foreach \b [count=\r from 0] in {0, 0, 1, 1, 0, 0, 1, 1}
+    \node[cell, minimum width=7mm, minimum height=5mm] at (5.6, \r) {\b};
+  \foreach \a [count=\r from 0] in {0, 0, 0, 0}
+    \node[cell, hi, minimum width=7mm, minimum height=5mm] at (4.8, \r) {\a};
+  \foreach \a [count=\r from 4] in {1, 1, 1, 1}
+    \node[cell, hi2, minimum width=7mm, minimum height=5mm] at (4.8, \r) {\a};
+  \node[lbl] at (5.6, 8.2) {8 строк};
+
+  \node[lbl, anchor=west, align=left] at (7.4, 3.5)
+       {Каждая новая переменная\\\textbf{удваивает} число строк.\\[2mm]
+        $n$ переменных $\Rightarrow 2^n$ строк.};
+
+\end{tikzpicture}

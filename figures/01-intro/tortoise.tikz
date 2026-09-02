@@ -1,0 +1,40 @@
+\begin{tikzpicture}[x=1mm, y=1mm]
+
+  % --- Верх: реальная картина -------------------------------------------
+  \node[lbl, anchor=west] at (0, 26) {\textbf{Как есть}};
+  \draw[draw=muted] (0, 16) -- (95, 16);
+
+  % Черепаха B в начале координат
+  \node[box, hi2, minimum width=13mm] (B) at (8, 16) {B};
+  \node[lbl, below=1.5mm of B] {скорость $v_2$};
+
+  % Черепаха A с форой
+  \node[box, hi, minimum width=13mm] (A) at (60, 16) {A};
+  \node[lbl, below=1.5mm of A] {скорость $v_1$};
+
+  % Фора g
+  \draw[decorate, decoration={brace, amplitude=1.6mm}, draw=muted]
+        (60, 21.5) -- (8, 21.5) node[midway, above=1.8mm, lbl] {фора $g$};
+
+  \draw[arracc] (68, 16) -- (80, 16);
+  \draw[arracc] (16, 16) -- (30, 16);
+
+  % --- Низ: относительная система ---------------------------------------
+  \node[lbl, anchor=west] at (0, -2) {\textbf{Как удобно считать: A стоит на месте}};
+  \draw[draw=muted] (0, -16) -- (95, -16);
+
+  \node[box, hi2, minimum width=13mm] (B2) at (8, -16) {B};
+  \node[lbl, below=1.5mm of B2] {скорость $v_2 - v_1$};
+
+  \node[box, hi, minimum width=13mm] (A2) at (60, -16) {A};
+  \node[lbl, below=1.5mm of A2] {стоит};
+
+  \draw[decorate, decoration={brace, amplitude=1.6mm}, draw=muted]
+        (60, -11) -- (8, -11) node[midway, above=1.8mm, lbl] {расстояние $g$};
+
+  \draw[arracc] (16, -16) -- (52, -16);
+
+  \node[text=fg, anchor=west, font=\small] at (0, -30)
+       {$t = \dfrac{g}{v_2 - v_1}$};
+
+\end{tikzpicture}

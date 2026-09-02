@@ -1,0 +1,33 @@
+\begin{tikzpicture}[x=11mm, y=-9mm]
+
+  \foreach \d [count=\i from 0] in {Пн, Вт, Ср, Чт, Пт, Сб, Вс}
+    \node[lbl] at (\i, -0.85) {\d};
+
+  % Пустые клетки до первого числа (месяц начинается в воскресенье)
+  \foreach \i in {0,...,5}
+    \node[ghost, minimum width=9mm] at (\i, 0) {};
+  \node[lbl, below=0mm of {(2.5, 0)}] {};
+
+  % Числа месяца
+  \foreach \n in {1,...,31} {
+    \pgfmathtruncatemacro{\pos}{\n + 5}
+    \pgfmathtruncatemacro{\col}{mod(\pos, 7)}
+    \pgfmathtruncatemacro{\row}{\pos / 7}
+    \ifnum\n=1
+      \node[cell, hi, minimum width=9mm] at (\col, \row) {\n};
+    \else
+      \node[cell, minimum width=9mm] at (\col, \row) {\n};
+    \fi
+  }
+
+  \node[lbl, anchor=west, align=left] at (7.4, 0)
+       {\texttt{start\_weekday = 6}\\(воскресенье)};
+  \node[lbl, anchor=west, align=left] at (7.4, 2.5)
+       {ширина клетки - 2 символа,\\между клетками - один пробел};
+  \node[lbl, anchor=west, align=left] at (7.4, 5)
+       {хвостовых пробелов\\в конце строк нет};
+
+  \draw[arrmuted] (7.3, 0) -- (6.6, 0);
+  \draw[arrmuted] (7.3, 5) -- (1.6, 5);
+
+\end{tikzpicture}

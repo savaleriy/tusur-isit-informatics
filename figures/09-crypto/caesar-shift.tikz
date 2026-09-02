@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=8mm, y=14mm]
+
+  % открытый текст
+  \node[lbl, anchor=east] at (-0.75, 0) {открытый};
+  \foreach \l [count=\i from 0] in {A,B,C,D,E,F,G} {
+    \node[cell, minimum width=7mm, minimum height=7mm] at (\i, 0) {\l};
+  }
+  \node[lbl] at (7.5, 0) {...};
+
+  % шифротекст
+  \node[lbl, anchor=east] at (-0.75, -1.6) {шифр};
+  \foreach \l [count=\i from 0] in {D,E,F,G,H,I,J} {
+    \node[cell, hi2, minimum width=7mm, minimum height=7mm] at (\i, -1.6) {\l};
+  }
+  \node[lbl] at (7.5, -1.6) {...};
+
+  % стрелки сдвига
+  \foreach \i in {0,...,6} {
+    \draw[arracc] (\i, -0.45) -- (\i, -1.15);
+  }
+
+  \node[lbl, anchor=west, align=left] at (8.6, -0.8)
+    {каждая буква сдвигается\\на 3 позиции вперёд};
+
+\end{tikzpicture}

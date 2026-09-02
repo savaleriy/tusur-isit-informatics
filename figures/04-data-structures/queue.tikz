@@ -1,0 +1,21 @@
+\begin{tikzpicture}[x=14mm, y=11mm]
+
+  % Очередь (FIFO)
+  \node[cell] (f) at (0, 0) {a};
+  \node[cell] (m) at (1, 0) {b};
+  \node[cell] (r) at (2, 0) {c};
+  \node[lbl, anchor=south] at (0, 0.55) {начало};
+  \node[lbl, anchor=south] at (2, 0.55) {конец};
+
+  % dequeue из начала
+  \node[box, minimum width=16mm] (deq) at (-1.9, 0) {dequeue};
+  \draw[arr] (f) -- (deq);
+
+  % enqueue в конец
+  \node[box, minimum width=16mm] (enq) at (4.1, 0) {enqueue};
+  \draw[arr] (enq) -- (r);
+
+  \node[lbl, anchor=west, align=left] at (4.1, 1.3)
+    {первым вошёл ---\\первым вышел};
+
+\end{tikzpicture}

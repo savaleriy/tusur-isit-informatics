@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=24mm, y=14mm,
+  box/.style={draw=fg, fill=boxfill, rounded corners=2pt, minimum width=30mm, minimum height=9mm, align=center}]
+
+  \node[box] (ada) at (0, 2.2) {Ада\\секрет $a$};
+  \node[box] (charles) at (2.2, 2.2) {Чарльз\\секрет $c$};
+
+  \node[box, minimum width=50mm] (channel) at (1.1, 0.6)
+    {открытый канал: $p$, $g$};
+
+  % Ада вычисляет A и шлёт
+  \node[cell] (A) at (0, -0.8) {$A = g^a \bmod p$};
+  \node[cell] (C) at (2.2, -0.8) {$C = g^c \bmod p$};
+
+  \draw[arracc] (A) -- (1.1, -0.8) -- (C);
+  \node[lbl] at (1.1, -0.4) {обмен $A$ и $C$};
+
+  % общий секрет
+  \node[box, minimum width=50mm] (shared) at (1.1, -2.0)
+    {общий секрет: $C^a \bmod p = A^c \bmod p$};
+
+  \draw[arrmuted] (ada.south) to[out=-80, in=100] (A.north);
+  \draw[arrmuted] (charles.south) to[out=-100, in=80] (C.north);
+  \draw[arracc] (A.south) -- (shared.north west);
+  \draw[arracc] (C.south) -- (shared.north east);
+
+\end{tikzpicture}

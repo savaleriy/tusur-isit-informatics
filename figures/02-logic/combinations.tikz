@@ -1,0 +1,28 @@
+\begin{tikzpicture}[x=11mm, y=-8mm]
+
+  \node[lbl, anchor=west, align=left] at (-0.6, -1.4)
+       {\textbf{Выбираем 2 буквы из \{A, B, C, D\}}};
+
+  % Размещения: порядок важен
+  \node[lbl, anchor=west] at (-0.6, 0) {\textbf{Порядок важен} --- размещения:};
+  \foreach \p [count=\i from 0] in {AB, BA, AC, CA, AD, DA, BC, CB, BD, DB, CD, DC} {
+    \pgfmathtruncatemacro{\col}{mod(\i, 6)}
+    \pgfmathtruncatemacro{\row}{\i / 6}
+    \node[box, minimum width=13mm] at (\col * 1.05 + 0.2, \row + 1.2) {\texttt{\p}};
+  }
+  \node[lbl, anchor=west] at (-0.6, 3.4)
+       {$\dfrac{4!}{(4-2)!} = 12$ штук};
+
+  \draw[arracc] (3.0, 4.2) -- (3.0, 5.4);
+  \node[lbl, anchor=west, align=left] at (3.3, 4.8)
+       {каждая пара посчитана $2! = 2$ раза\\(\texttt{AB} и \texttt{BA} --- один и тот же набор),\\значит делим на $2!$};
+
+  % Сочетания: порядок не важен
+  \node[lbl, anchor=west] at (-0.6, 6.2) {\textbf{Порядок не важен} --- сочетания:};
+  \foreach \p [count=\i from 0] in {AB, AC, AD, BC, BD, CD} {
+    \node[box, hi, minimum width=13mm] at (\i * 1.05 + 0.2, 7.4) {\texttt{\p}};
+  }
+  \node[lbl, anchor=west] at (-0.6, 8.6)
+       {$\dbinom{4}{2} = \dfrac{4!}{2!\,(4-2)!} = 6$ штук};
+
+\end{tikzpicture}

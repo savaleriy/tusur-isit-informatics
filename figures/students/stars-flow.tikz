@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % --- Источники ---
+  \node[lbl, anchor=west] at (-1.2, 3.4) {\textbf{Откуда берутся}};
+  \node[box, hi, minimum width=36mm, minimum height=10mm, align=center] (p) at (0, 2.2)
+       {практика\\7 наборов по 25};
+  \node[box, hi, minimum width=36mm, minimum height=10mm, align=center] (l) at (0, 0.4)
+       {лабораторные\\3 по 30 плюс допы};
+
+  % --- Две величины ---
+  \node[box, minimum width=34mm, minimum height=10mm, align=center] (earn) at (6.2, 2.2)
+       {\textbf{Заработано}\\только растёт};
+  \node[box, hi2, minimum width=34mm, minimum height=10mm, align=center] (bal) at (6.2, 0.4)
+       {\textbf{Баланс}\\растёт и тает};
+
+  \draw[arr] (p) -- (earn);
+  \draw[arr] (p.east) -- (bal.west);
+  \draw[arr] (l.east) -- (earn.west);
+  \draw[arr] (l) -- (bal);
+
+  % --- Куда уходят ---
+  \node[lbl, anchor=west] at (11.4, 3.4) {\textbf{Куда уходят}};
+  \node[box, minimum width=40mm, minimum height=10mm, align=center] (adm) at (13.0, 2.2)
+       {\textbf{допуск к экзамену}\\порог 15 за каждый набор};
+  \node[box, minimum width=40mm, minimum height=10mm, align=center] (buy) at (13.0, 0.4)
+       {\textbf{покупки}\\на КТ и экзамене};
+
+  \draw[arr] (earn) -- (adm);
+  \draw[arr] (bal) -- (buy);
+
+  % --- Ставки ---
+  \node[box, minimum width=30mm, minimum height=9mm, align=center] (bet) at (6.2, -2.2)
+       {\textbf{ставки}\\лабы 1 и 3};
+  \draw[arr] (bal.south) to[out=250, in=110] (bet.north west);
+  \draw[arr] (bet.north east) to[out=70, in=290] (bal.south);
+
+  \node[lbl, anchor=west, align=left] at (8.2, -2.2)
+       {ставки двигают только баланс,\\заработанного не касаются};
+
+  \node[lbl, anchor=west, align=left] at (-1.2, -2.2)
+       {проиграв всё, студент\\теряет привилегии,\\но не допуск};
+
+\end{tikzpicture}
