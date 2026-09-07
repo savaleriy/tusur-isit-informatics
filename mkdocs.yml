@@ -9,7 +9,6 @@ theme:
   name: material
   language: ru
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.expand
     - navigation.indexes
