@@ -108,4 +108,6 @@ nav:
   - Экзамен: 11-exam/exam_2025.md
   - AI Agenda: AI_AGENDA.md
   - Звёзды и оценивание: Students/stars.md
-  - Успеваемость: Students/2025.md
+  - Успеваемость:
+      - 2026: Students/2026.md
+      - 2025: Students/2025.md
