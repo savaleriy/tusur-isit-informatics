@@ -13,7 +13,9 @@
 зелёные точки за решённое, а не стену красного.
 """
 
+import ast
 import importlib.util
+import io
 import os
 import sys
 from pathlib import Path
@@ -47,6 +49,47 @@ def solutions_dir(pytestconfig):
     return path
 
 
+#: операторы, без которых функции не заработают --- их выполняем строго
+_DEFINITIONS = (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef,
+                ast.Import, ast.ImportFrom)
+
+
+def _exec_solution(path: Path, module) -> list[str]:
+    """Выполняет файл решения так, чтобы до тестов дошли функции, а не скрипт.
+
+    Под решением почти всегда дописана демонстрация: `input()`, `print()`,
+    вызов функции на своих данных. Нас интересуют только функции, поэтому
+    операторы верхнего уровня выполняются по одному:
+
+    * определения и импорты --- строго: упало, значит решение сломано;
+    * всё остальное --- по возможности: `n = int(input())` под функцией
+      не повод не проверять саму функцию.
+
+    `sys.stdin` на это время пустой, поэтому `input()` сразу поднимает
+    `EOFError`, а не блокируется и не ругается на перехваченный ввод.
+
+    Возвращает описания пропущенных операторов --- их показываем студенту,
+    если функции в файле так и не нашлось.
+    """
+    tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+    skipped: list[str] = []
+    original_stdin = sys.stdin
+    sys.stdin = io.StringIO()
+    try:
+        for node in tree.body:
+            code = compile(ast.Module(body=[node], type_ignores=[]), str(path), "exec")
+            if isinstance(node, _DEFINITIONS):
+                exec(code, module.__dict__)  # noqa: S102
+            else:
+                try:
+                    exec(code, module.__dict__)  # noqa: S102
+                except (Exception, SystemExit) as exc:  # noqa: BLE001
+                    skipped.append(f"строка {node.lineno}: {type(exc).__name__}: {exc}")
+    finally:
+        sys.stdin = original_stdin
+    return skipped
+
+
 def _load_module(directory: Path, name: str):
     """Импортирует <directory>/<name>.py как модуль. Пропускает тест, если файла нет."""
     path = directory / f"{name}.py"
@@ -57,8 +100,10 @@ def _load_module(directory: Path, name: str):
     module = importlib.util.module_from_spec(spec)
     sys.modules[spec.name] = module
     try:
-        spec.loader.exec_module(module)
-    except Exception as exc:  # noqa: BLE001 --- показываем студенту любую поломку
+        module.__skipped_statements__ = _exec_solution(path, module)
+    except SyntaxError as exc:
+        pytest.fail(f"{path.name}: синтаксическая ошибка в строке {exc.lineno}: {exc.msg}")
+    except Exception as exc:  # noqa: BLE001 --- сломано само определение функции
         pytest.fail(f"{path.name} не импортируется: {type(exc).__name__}: {exc}")
     return module
 
