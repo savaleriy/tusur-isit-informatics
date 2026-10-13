@@ -1,0 +1,37 @@
+\begin{tikzpicture}[x=10mm, y=10mm,
+    cls/.style={box, minimum width=26mm, font=\ttfamily\small},
+    rel/.style={anchor=west, align=left, font=\small, text=fg}]
+
+  % Наследование: пустой треугольник у родителя
+  \node[cls] (l1) at (0, 0) {Circle};
+  \node[cls] (r1) at (4.6, 0) {Shape};
+  \draw[-{Triangle[open, length=3mm, width=3mm]}, draw=fg] (l1) -- (r1);
+  \node[rel] at (6.2, 0) {наследование: \textit{является}};
+
+  % Композиция: закрашенный ромб у владельца
+  \node[cls] (l2) at (0, -1.2) {House};
+  \node[cls] (r2) at (4.6, -1.2) {Room};
+  \draw[{Diamond[fill=fg, length=4mm, width=2.6mm]}-, draw=fg] (l2) -- (r2);
+  \node[rel] at (6.2, -1.2) {композиция: \textit{состоит из, владеет}};
+
+  % Агрегация: пустой ромб у контейнера
+  \node[cls] (l3) at (0, -2.4) {Group};
+  \node[cls] (r3) at (4.6, -2.4) {Student};
+  \draw[{Diamond[open, length=4mm, width=2.6mm]}-, draw=fg] (l3) -- (r3);
+  \node[rel] at (6.2, -2.4) {агрегация: \textit{содержит, не владеет}};
+
+  % Ассоциация: простая стрелка
+  \node[cls] (l4) at (0, -3.6) {Teacher};
+  \node[cls] (r4) at (4.6, -3.6) {Student};
+  \draw[arr] (l4) -- (r4);
+  \node[rel] at (6.2, -3.6) {ассоциация: \textit{знает о}};
+
+  % Зависимость: пунктирная стрелка
+  \node[cls] (l5) at (0, -4.8) {total\_area};
+  \node[cls] (r5) at (4.6, -4.8) {Shape};
+  \draw[->, draw=fg, densely dashed] (l5) -- (r5);
+  \node[rel] at (6.2, -4.8) {зависимость: \textit{пользуется}};
+
+  \node[lbl, anchor=west] at (6.2, 0.75) {сверху вниз --- от сильной связи к слабой};
+
+\end{tikzpicture}

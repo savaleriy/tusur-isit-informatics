@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % Слева: одна фигура размазана по трём спискам
+  \node[lbl, anchor=south] at (1.2, 0.7) {три списка};
+  \node[anchor=east, font=\ttfamily\small] at (0.4, 0) {circle\_x};
+  \node[anchor=east, font=\ttfamily\small] at (0.4, -1) {circle\_y};
+  \node[anchor=east, font=\ttfamily\small] at (0.4, -2) {circle\_r};
+  \node[cell] at (1, 0) {0};
+  \node[cell] at (1, -1) {0};
+  \node[cell] at (1, -2) {1};
+  \node[cell, hi] at (2, 0) {6};
+  \node[cell, hi] at (2, -1) {2};
+  \node[cell, hi] at (2, -2) {2};
+  \node[lbl, text=accent] at (1.2, -2.9) {клумба 1 --- в трёх разных местах};
+
+  % Справа: одна фигура - один объект
+  \node[lbl, anchor=south] at (6.9, 0.7) {объекты};
+  \node[box, minimum width=20mm, align=left, font=\ttfamily\small] (o0) at (5.5, -1.1)
+    {x = 0\\y = 0\\r = 1};
+  \node[lbl, anchor=south, font=\ttfamily\scriptsize] at (o0.north) {Circle};
+  \node[box, hi, minimum width=20mm, align=left, font=\ttfamily\small] (o1) at (8.3, -1.1)
+    {x = 6\\y = 2\\r = 2};
+  \node[lbl, anchor=south, font=\ttfamily\scriptsize] at (o1.north) {Circle};
+  \node[lbl, text=accent] at (6.9, -2.9) {клумба 1 --- один объект};
+
+\end{tikzpicture}

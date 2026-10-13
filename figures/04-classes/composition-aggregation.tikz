@@ -1,0 +1,24 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % Композиция: точки внутри отрезка и принадлежат только ему
+  \node[lbl, anchor=south] at (0, 1.15) {композиция};
+  \draw[rounded corners=3pt, draw=fg, fill=boxfill] (-2.05, 0.95) rectangle (2.05, -1.85);
+  \node[font=\ttfamily\small, anchor=north] at (0, 0.9) {Segment};
+  \node[cell, hi, minimum width=34mm, font=\ttfamily\small] at (0, -0.05) {start: Point(0, 0)};
+  \node[cell, hi, minimum width=34mm, font=\ttfamily\small] at (0, -1.1) {end: Point(3, 4)};
+  \node[lbl, align=center] at (0, -2.5) {точки создаются вместе с отрезком\\и принадлежат только ему};
+
+  % Агрегация: отрезки ломаной делят общую вершину
+  \node[lbl, anchor=south] at (6.7, 1.15) {агрегация};
+  \node[box, minimum width=18mm, font=\ttfamily\small] (ab) at (5.2, 0.4) {ab: Segment};
+  \node[box, minimum width=18mm, font=\ttfamily\small] (bc) at (8.2, 0.4) {bc: Segment};
+  \node[cell, minimum width=16mm, font=\ttfamily\small] (a) at (4.2, -1.1) {a: Point};
+  \node[cell, hi2, minimum width=16mm, font=\ttfamily\small] (b) at (6.7, -1.1) {b: Point};
+  \node[cell, minimum width=16mm, font=\ttfamily\small] (c) at (9.2, -1.1) {c: Point};
+  \draw[arr] (ab.south) -- (a.north);
+  \draw[arr] (ab.south) -- (b.north);
+  \draw[arr] (bc.south) -- (b.north);
+  \draw[arr] (bc.south) -- (c.north);
+  \node[lbl, align=center] at (6.7, -2.4) {точки созданы снаружи,\\вершина b общая у двух отрезков};
+
+\end{tikzpicture}

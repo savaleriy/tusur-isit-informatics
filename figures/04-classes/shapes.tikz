@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=10mm, y=10mm,
+    inherit/.style={-{Triangle[open, length=3mm, width=3mm]}, draw=fg},
+    cls/.style={box, minimum width=30mm, align=center, font=\ttfamily\small}]
+
+  % Абстрактный родитель
+  \node[cls, densely dashed] (shape) at (0, 0)
+    {\textit{Shape}\\[2pt]{\scriptsize x, y, move()}\\{\scriptsize\textit{area(), perimeter()}}};
+  \node[lbl, anchor=west] at (shape.east) {\ абстрактный класс};
+
+  % Наследники
+  \node[cls] (circle) at (-3.6, -2.6) {Circle\\[2pt]{\scriptsize r}};
+  \node[cls] (rect) at (0, -2.6) {Rectangle\\[2pt]{\scriptsize w, h}};
+  \node[cls, hi] (tri) at (3.6, -2.6) {Triangle\\[2pt]{\scriptsize a, b, c}};
+  \node[cls] (square) at (0, -4.8) {Square\\[2pt]{\scriptsize side}};
+
+  \draw[inherit] (circle.north) -- (shape.south);
+  \draw[inherit] (rect.north) -- (shape.south);
+  \draw[inherit] (tri.north) -- (shape.south);
+  \draw[inherit] (square.north) -- (rect.south);
+
+  \node[lbl, anchor=north] at (tri.south) {добавлен позже,\\total\_area не менялась};
+
+\end{tikzpicture}

@@ -82,9 +82,14 @@ nav:
       - Python: 03-algorithms/python.md
       - Задачи: 03-algorithms/task.md
   - 4. Структуры данных:
-      - Конспект: 04-data-structures/note.md
-      - Python: 04-data-structures/python.md
-      - Задачи: 04-data-structures/task.md
+      - 4.1 Классы и ООП:
+          - Конспект: 04-classes/note.md
+          - Python: 04-classes/python.md
+          - Задачи: 04-classes/task.md
+      - 4.2 Абстрактные типы данных:
+          - Конспект: 04-data-structures/note.md
+          - Python: 04-data-structures/python.md
+          - Задачи: 04-data-structures/task.md
   - 5. Стратегии решения задач:
       - Конспект: 05-strategies/note.md
       - Python: 05-strategies/python.md

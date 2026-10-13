@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % Наследование: отрезок получил от точки всё
+  \node[lbl, anchor=south, font=\ttfamily\scriptsize] at (1.6, 1.65) {class Segment(Point)};
+  \node[box, minimum width=30mm, align=left, font=\ttfamily\small] (sl) at (0, 0)
+    {\textcolor{accentb}{x, y}\\end\\[3pt]\textcolor{accentb}{move()}\\\textcolor{accentb}{distance\_to()}};
+  \node[font=\ttfamily\small, anchor=south] at (sl.north) {Segment};
+  \node[cell, minimum width=22mm, font=\ttfamily\small] (pe) at (3.6, 0) {Point(3, 4)};
+  \draw[arr] (sl.east) -- node[lbl, above] {end} (pe.west);
+  \node[lbl, align=center] at (1.6, -1.65) {оранжевое досталось от Point,\\в том числе ненужное отрезку};
+
+  % Композиция: отрезок состоит из двух точек
+  \node[lbl, anchor=south, font=\ttfamily\scriptsize] at (8.2, 1.65) {class Segment};
+  \node[box, hi, minimum width=30mm, align=left, font=\ttfamily\small] (sr) at (6.6, 0)
+    {start\\end\\[3pt]move()\\length()};
+  \node[font=\ttfamily\small, anchor=south] at (sr.north) {Segment};
+  \node[cell, minimum width=22mm, font=\ttfamily\small] (ps) at (10.2, 0.55) {Point(0, 0)};
+  \node[cell, minimum width=22mm, font=\ttfamily\small] (pf) at (10.2, -0.55) {Point(3, 4)};
+  \draw[arr] (sr.east) -- node[lbl, above, sloped] {start} (ps.west);
+  \draw[arr] (sr.east) -- node[lbl, below, sloped] {end} (pf.west);
+  \node[lbl, align=center] at (8.2, -1.65) {у отрезка только то,\\что имеет смысл для отрезка};
+
+\end{tikzpicture}

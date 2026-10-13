@@ -46,6 +46,7 @@ SECTIONS = [
     "01-intro",
     "02-logic",
     "03-algorithms",
+    "04-classes",
     "04-data-structures",
     "05-strategies",
     "06-lab-game",

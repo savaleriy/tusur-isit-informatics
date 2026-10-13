@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=10mm, y=10mm]
+
+  % q = p: два ярлыка на одном объекте
+  \node[lbl, anchor=south, font=\ttfamily\scriptsize] at (1.6, 1.1) {q = p; q.move(5, 0)};
+  \node[box, font=\ttfamily] (p) at (0, 0.5) {p};
+  \node[box, font=\ttfamily] (q) at (0, -0.7) {q};
+  \node[cell, hi, minimum width=24mm, font=\ttfamily\small] (o) at (3.2, -0.1) {Point(5, 0)};
+  \draw[arr] (p) -- (o);
+  \draw[arr] (q) -- (o);
+  \node[lbl] at (1.6, -1.6) {один объект, два ярлыка};
+
+  % q = copy.copy(p): два объекта
+  \node[lbl, anchor=south, font=\ttfamily\scriptsize] at (8.1, 1.1) {q = copy.copy(p); q.move(5, 0)};
+  \node[box, font=\ttfamily] (p2) at (6.5, 0.5) {p};
+  \node[box, font=\ttfamily] (q2) at (6.5, -0.7) {q};
+  \node[cell, minimum width=24mm, font=\ttfamily\small] (o1) at (9.7, 0.5) {Point(0, 0)};
+  \node[cell, hi2, minimum width=24mm, font=\ttfamily\small] (o2) at (9.7, -0.7) {Point(5, 0)};
+  \draw[arr] (p2) -- (o1);
+  \draw[arr] (q2) -- (o2);
+  \node[lbl] at (8.1, -1.6) {два независимых объекта};
+
+\end{tikzpicture}
