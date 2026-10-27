@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=21mm, y=12mm]
+
+  \tikzset{pq/.style={cell, minimum width=19mm}}
+
+  % Неотсортированный список
+  \node[lbl, anchor=west] at (-0.5, 1.0) {неотсортированный: push дописывает в конец, pop ищет минимум};
+  \node[pq] (u0) at (0, 0) {порез, 3};
+  \node[pq] (u1) at (1, 0) {перелом, 2};
+  \node[pq, hi2] (u2) at (2, 0) {сердце, 1};
+  \node[pq] (u3) at (3, 0) {ушиб, 3};
+  \draw[arrmuted, rounded corners=3pt] (u0.south) -- ++(0, -0.3) -| (u1.south);
+  \draw[arrmuted, rounded corners=3pt] (u1.south) -- ++(0, -0.3) -| (u2.south);
+  \draw[arrmuted, rounded corners=3pt] (u2.south) -- ++(0, -0.3) -| (u3.south);
+  \node[lbl, anchor=west, align=left] at (-0.5, -0.95)
+    {pop(): просмотреть все - $O(n)$, вынуть найденное из середины - ещё $O(n)$};
+
+  % Отсортированный список
+  \node[lbl, anchor=west] at (-0.5, -2.0) {отсортированный: самый срочный в конце};
+  \node[pq, hi] (s0) at (0, -3.0) {ушиб, 3};
+  \node[pq] (s1) at (1, -3.0) {порез, 3};
+  \node[pq] (s2) at (2, -3.0) {перелом, 2};
+  \node[pq, hi2] (s3) at (3, -3.0) {сердце, 1};
+  \node[lbl, anchor=west, align=left, text=accentb] at (3.55, -3.0) {pop() берёт\\с конца - $O(1)$};
+  \draw[arracc] (0, -4.0) node[below, lbl, text=accent, align=center]
+    {push(ушиб, 3): ищем место с конца, встаём за равными - $O(n)$} -- (s0.south);
+
+\end{tikzpicture}

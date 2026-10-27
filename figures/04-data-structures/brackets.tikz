@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=15mm, y=11mm]
+
+  % Правильная строка "([])"
+  \node[lbl, anchor=east] at (-0.6, 1.0) {\texttt{"([])"}};
+  \node[box] at (0, 2.0) {\texttt{(}};
+  \node[box] at (1, 2.0) {\texttt{[}};
+  \node[box] at (2, 2.0) {\texttt{]}};
+  \node[box] at (3, 2.0) {\texttt{)}};
+  \foreach \x in {0, ..., 3} {
+    \draw[muted] (\x - 0.35, -0.45) -- (\x + 0.35, -0.45);
+  }
+  \node[cell] at (0, 0) {\texttt{(}};
+  \node[cell] at (1, 0) {\texttt{(}};
+  \node[cell, hi] at (1, 0.75) {\texttt{[}};
+  \node[cell] at (2, 0) {\texttt{(}};
+  \node[ghost] at (2, 0.75) {\texttt{[}};
+  \node[ghost] at (3, 0) {\texttt{(}};
+  \node[lbl, anchor=west, text=accent, align=left] at (3.5, 0.3) {стек пуст:\\True};
+
+  % Неправильная строка "([)]"
+  \node[lbl, anchor=east] at (-0.6, -2.2) {\texttt{"([)]"}};
+  \node[box] at (0, -1.2) {\texttt{(}};
+  \node[box] at (1, -1.2) {\texttt{[}};
+  \node[box] at (2, -1.2) {\texttt{)}};
+  \foreach \x in {0, ..., 2} {
+    \draw[muted] (\x - 0.35, -3.65) -- (\x + 0.35, -3.65);
+  }
+  \node[cell] at (0, -3.2) {\texttt{(}};
+  \node[cell] at (1, -3.2) {\texttt{(}};
+  \node[cell] at (1, -2.45) {\texttt{[}};
+  \node[cell] at (2, -3.2) {\texttt{(}};
+  \node[cell, hi2] at (2, -2.45) {\texttt{[}};
+  \node[lbl, anchor=west, text=accentb, align=left] at (2.5, -2.45)
+    {\texttt{)} не пара для \texttt{[}\\на вершине: False};
+
+\end{tikzpicture}

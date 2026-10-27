@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=16mm, y=12mm]
+
+  \node[cell] (a) at (0, 0) {A};
+  \node[cell] (b) at (1.6, 0) {B};
+  \node[cell] (c) at (3.2, 0) {C};
+
+  % next - сверху, prev - снизу
+  \draw[arr] ([yshift=1.5mm]a.east) -- ([yshift=1.5mm]b.west);
+  \draw[arr] ([yshift=1.5mm]b.east) -- ([yshift=1.5mm]c.west);
+  \draw[arracc] ([yshift=-1.5mm]b.west) -- ([yshift=-1.5mm]a.east);
+  \draw[arracc] ([yshift=-1.5mm]c.west) -- ([yshift=-1.5mm]b.east);
+
+  \node[lbl] at (0.8, 0.45) {next};
+  \node[lbl, text=accent] at (0.8, -0.45) {prev};
+
+  % Концы цепочки
+  \draw[arracc] ([yshift=-1.5mm]a.west) -- ++(-0.7, 0) node[lbl, anchor=east] {None};
+  \draw[arr] ([yshift=1.5mm]c.east) -- ++(0.7, 0) node[lbl, anchor=west] {None};
+
+  % Голова и хвост
+  \node[box] (head) at (0, 1.3) {head};
+  \node[box] (tail) at (3.2, 1.3) {tail};
+  \draw[arr] (head) -- (a);
+  \draw[arr] (tail) -- (c);
+
+\end{tikzpicture}

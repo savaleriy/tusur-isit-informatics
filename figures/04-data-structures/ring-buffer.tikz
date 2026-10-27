@@ -1,0 +1,26 @@
+\begin{tikzpicture}[x=11mm, y=12mm]
+
+  % Массив из 8 ячеек: очередь a, b, c, d, e занимает ячейки 5, 6, 7, 0, 1
+  \foreach \i/\v in {5/a, 6/b, 7/c, 0/d, 1/e} {
+    \node[cell, hi] (r\i) at (\i, 0) {\v};
+  }
+  \foreach \i in {2, 3, 4} {
+    \node[cell] (r\i) at (\i, 0) {};
+  }
+  \foreach \i in {0, ..., 7} {
+    \node[lbl] at (\i, -0.55) {\i};
+  }
+
+  % head и место для следующего элемента
+  \node[box] (head) at (5, 1.3) {head = 5};
+  \draw[arr] (head) -- (r5);
+  \node[box] (next) at (2, 1.3) {(5 + 5) \% 8 = 2};
+  \draw[arr] (next) -- (r2);
+  \node[lbl, anchor=west, align=left] at (-0.5, 2.2)
+    {5 элементов с ячейки 5: следующий встанет в ячейку 2};
+
+  % перенос с конца массива в начало
+  \draw[arracc, rounded corners=4pt] (r7.south) ++(0, -0.35) -- ++(0, -0.5) -| ([yshift=-3.5mm]r0.south);
+  \node[lbl, text=accent] at (3.5, -1.45) {после ячейки 7 идёт ячейка 0};
+
+\end{tikzpicture}

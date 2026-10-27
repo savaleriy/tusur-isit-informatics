@@ -1,0 +1,45 @@
+\begin{tikzpicture}[x=10mm, y=12mm]
+
+  % 1. Четыре append заполнили блок
+  \node[lbl, anchor=east] at (-0.7, 0) {append $\times 4$};
+  \foreach \v [count=\i from 0] in {0, 10, 20, 30} {
+    \node[cell] at (\i, 0) {\v};
+  }
+  \node[lbl, anchor=west] at (7.6, 0) {len 4, capacity 4};
+
+  % 2. Пятый append: новый блок вдвое больше
+  \node[lbl, anchor=east] at (-0.7, -1.4) {append(40)};
+  \foreach \v [count=\i from 0] in {0, 10, 20, 30} {
+    \node[cell] (b\i) at (\i, -1.4) {\v};
+  }
+  \node[cell, hi2] at (4, -1.4) {40};
+  \foreach \i in {5, 6, 7} {
+    \node[cell] at (\i, -1.4) {};
+  }
+  \node[lbl, anchor=west] at (7.6, -1.4) {len 5, capacity 8};
+  \node[lbl, anchor=west] at (4.6, -0.7) {места нет: 4 копирования в новый блок};
+
+  % 3. Запись по индексу
+  \node[lbl, anchor=east] at (-0.7, -2.8) {a[1] = 99};
+  \foreach \v [count=\i from 0] in {0, , 20, 30, 40, , , } {
+    \node[cell] at (\i, -2.8) {\v};
+  }
+  \node[cell, hi] at (1, -2.8) {99};
+  \node[lbl, anchor=west] at (7.6, -2.8) {$O(1)$: адрес по формуле};
+
+  % 4. pop
+  \node[lbl, anchor=east] at (-0.7, -4.2) {pop()};
+  \foreach \v [count=\i from 0] in {0, 99, 20, 30} {
+    \node[cell] at (\i, -4.2) {\v};
+  }
+  \node[cell] at (4, -4.2) {\scriptsize None};
+  \foreach \i in {5, 6, 7} {
+    \node[cell] at (\i, -4.2) {};
+  }
+  \node[lbl, anchor=west] at (7.6, -4.2) {вернул 40; len 4, capacity 8};
+  \draw[decorate, decoration={brace, mirror, amplitude=4pt}, draw=accent]
+    (-0.45, -4.65) -- (3.45, -4.65)
+    node[midway, below=3pt, lbl, text=accent] {элементы: индексы 0..3};
+  \node[lbl, text=accentb, align=center] at (4, -5.2) {a[4] -\\IndexError};
+
+\end{tikzpicture}

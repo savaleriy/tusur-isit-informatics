@@ -1,0 +1,34 @@
+\begin{tikzpicture}[x=19mm, y=11mm]
+
+  % Каждый столбец - состояние стека после операции, вершина сверху
+  \foreach \x in {0, ..., 5} {
+    \draw[muted] (\x - 0.35, -0.5) -- (\x + 0.35, -0.5);
+  }
+
+  \node[lbl] at (0, 2.5) {Stack()};
+  \node[lbl] at (0, 0) {пусто};
+
+  \node[lbl] at (1, 2.5) {push(1)};
+  \node[cell, hi] at (1, 0) {1};
+
+  \node[lbl] at (2, 2.5) {push(2)};
+  \node[cell] at (2, 0) {1};
+  \node[cell, hi] at (2, 0.73) {2};
+
+  \node[lbl] at (3, 2.5) {push(3)};
+  \node[cell] at (3, 0) {1};
+  \node[cell] at (3, 0.73) {2};
+  \node[cell, hi] at (3, 1.46) {3};
+
+  \node[lbl] at (4, 2.5) {pop()};
+  \node[cell] at (4, 0) {1};
+  \node[cell] at (4, 0.73) {2};
+  \node[ghost] at (4, 1.46) {3};
+  \node[lbl, text=accentb] at (4, -0.95) {вернул 3};
+
+  \node[lbl] at (5, 2.5) {pop()};
+  \node[cell] at (5, 0) {1};
+  \node[ghost] at (5, 0.73) {2};
+  \node[lbl, text=accentb] at (5, -0.95) {вернул 2};
+
+\end{tikzpicture}

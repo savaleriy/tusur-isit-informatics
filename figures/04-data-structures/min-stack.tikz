@@ -1,0 +1,43 @@
+\begin{tikzpicture}[x=18mm, y=11mm]
+
+  % Состояние после push 5, 2, 8: рядом два стека
+  \node[lbl] at (0, 2.6) {элементы};
+  \node[lbl] at (1, 2.6) {минимумы};
+  \draw[muted] (-0.4, -0.5) -- (1.4, -0.5);
+  \node[cell] at (0, 0) {5};
+  \node[cell] at (0, 0.73) {2};
+  \node[cell] at (0, 1.46) {8};
+  \node[cell] at (1, 0) {5};
+  \node[cell] at (1, 0.73) {2};
+  \node[cell, hi] (m1) at (1, 1.46) {2};
+  \node[lbl, align=center] at (0.5, -1.05) {push 5, 2, 8};
+  \node[lbl, anchor=west, text=accent, align=left] at (1.5, 1.46) {get\_min():\\вершина - 2};
+
+  % После pop(): оба стека теряют вершину
+  \begin{scope}[xshift=72mm]
+    \node[lbl] at (0, 2.6) {элементы};
+    \node[lbl] at (1, 2.6) {минимумы};
+    \draw[muted] (-0.4, -0.5) -- (1.4, -0.5);
+    \node[cell] at (0, 0) {5};
+    \node[cell] at (0, 0.73) {2};
+    \node[ghost] at (0, 1.46) {8};
+    \node[cell] at (1, 0) {5};
+    \node[cell, hi] at (1, 0.73) {2};
+    \node[ghost] at (1, 1.46) {2};
+    \node[lbl, align=center] at (0.5, -1.05) {pop() вернул 8};
+  \end{scope}
+
+  % Ещё pop(): минимум снова 5
+  \begin{scope}[xshift=134mm]
+    \node[lbl] at (0, 2.6) {элементы};
+    \node[lbl] at (1, 2.6) {минимумы};
+    \draw[muted] (-0.4, -0.5) -- (1.4, -0.5);
+    \node[cell] at (0, 0) {5};
+    \node[ghost] at (0, 0.73) {2};
+    \node[cell, hi] at (1, 0) {5};
+    \node[ghost] at (1, 0.73) {2};
+    \node[lbl, align=center] at (0.5, -1.05) {pop() вернул 2};
+    \node[lbl, anchor=west, text=accent, align=left] at (1.5, 0) {get\_min():\\снова 5};
+  \end{scope}
+
+\end{tikzpicture}

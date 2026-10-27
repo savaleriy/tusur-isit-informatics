@@ -1,0 +1,45 @@
+\begin{tikzpicture}[x=17mm, y=13mm]
+
+  % Шаг 1: начинаем с головы
+  \node[lbl, anchor=east] at (-0.6, 0) {шаг 1};
+  \node[cell] (a1) at (0, 0) {1};
+  \node[cell] (b1) at (1, 0) {2};
+  \node[cell] (c1) at (2, 0) {3};
+  \node[lbl] (n1) at (2.9, 0) {None};
+  \draw[arr] (a1) -- (b1);
+  \draw[arr] (b1) -- (c1);
+  \draw[arr] (c1) -- (n1);
+  \node[lbl, text=accent] (node1) at (0, 0.75) {node};
+  \draw[arracc] (node1) -- (a1);
+  \node[lbl, anchor=west, align=left] at (3.5, 0)
+    {prev = None\\1 $\ne$ 2: идём дальше};
+
+  % Шаг 2: нашли
+  \node[lbl, anchor=east] at (-0.6, -1.6) {шаг 2};
+  \node[cell] (a2) at (0, -1.6) {1};
+  \node[cell, hi2] (b2) at (1, -1.6) {2};
+  \node[cell] (c2) at (2, -1.6) {3};
+  \node[lbl] (n2) at (2.9, -1.6) {None};
+  \draw[arr] (a2) -- (b2);
+  \draw[arr] (b2) -- (c2);
+  \draw[arr] (c2) -- (n2);
+  \node[lbl, text=accentb] (prev2) at (0, -0.85) {prev};
+  \draw[->, draw=accentb, line width=1pt] (prev2) -- (a2);
+  \node[lbl, text=accent] (node2) at (1, -0.85) {node};
+  \draw[arracc] (node2) -- (b2);
+  \node[lbl, anchor=west, align=left] at (3.5, -1.6)
+    {нашли 2,\\prev держит узел перед ним};
+
+  % Шаг 3: перешагиваем
+  \node[lbl, anchor=east] at (-0.6, -3.4) {шаг 3};
+  \node[cell] (a3) at (0, -3.4) {1};
+  \node[ghost] (b3) at (1, -4.2) {2};
+  \node[cell] (c3) at (2, -3.4) {3};
+  \node[lbl] (n3) at (2.9, -3.4) {None};
+  \draw[arracc] (a3) -- (c3);
+  \draw[arrmuted] (b3) -- (c3);
+  \draw[arr] (c3) -- (n3);
+  \node[lbl, anchor=west, align=left] at (3.5, -3.4)
+    {prev.next = node.next:\\узел 2 больше никто не видит};
+
+\end{tikzpicture}

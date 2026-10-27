@@ -1,0 +1,25 @@
+\begin{tikzpicture}[x=11mm, y=12mm]
+
+  % Старый блок: заполнен
+  \node[lbl, anchor=east] at (-0.65, 0) {было:};
+  \foreach \v [count=\i from 0] in {7, 3, 5, 1} {
+    \node[cell] (o\i) at (\i, 0) {\v};
+  }
+  \node[lbl, anchor=west] at (3.7, 0) {ёмкость 4, занято 4};
+
+  % Новый блок вдвое больше
+  \node[lbl, anchor=east] at (-0.65, -1.8) {стало:};
+  \foreach \v [count=\i from 0] in {7, 3, 5, 1} {
+    \node[cell] (n\i) at (\i, -1.8) {\v};
+    \draw[arrmuted] (o\i) -- (n\i);
+  }
+  \node[cell, hi2] at (4, -1.8) {9};
+  \foreach \i in {5, 6, 7} {
+    \node[cell] at (\i, -1.8) {};
+  }
+  \node[lbl, anchor=west] at (7.7, -1.8) {ёмкость 8, занято 5};
+
+  \node[lbl, anchor=west, align=left] at (4.2, -0.9)
+    {append(9): места нет ---\\копируем всё в блок вдвое больше};
+
+\end{tikzpicture}

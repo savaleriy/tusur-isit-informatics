@@ -1,0 +1,36 @@
+\begin{tikzpicture}[x=10mm, y=11mm]
+
+  % Три отсортированных списка, взятые элементы - призраки
+  \node[lbl, anchor=east] at (-0.7, 0) {список 0};
+  \node[ghost] at (0, 0) {1};
+  \node[cell, hi] (l0) at (1, 0) {4};
+  \node[cell] at (2, 0) {7};
+
+  \node[lbl, anchor=east] at (-0.7, -1) {список 1};
+  \node[ghost] at (0, -1) {2};
+  \node[cell, hi] (l1) at (1, -1) {5};
+  \node[cell] at (2, -1) {8};
+
+  \node[lbl, anchor=east] at (-0.7, -2) {список 2};
+  \node[ghost] at (0, -2) {0};
+  \node[cell, hi2] (l2) at (1, -2) {3};
+  \node[cell] at (2, -2) {6};
+  \node[cell] at (3, -2) {9};
+
+  % Очередь с приоритетом: по одному кандидату от списка
+  \node[lbl] at (6.5, 0.7) {очередь с приоритетом};
+  \node[cell, minimum width=16mm] (q0) at (5.5, -0.3) {4 из 0};
+  \node[cell, minimum width=16mm] (q1) at (7.5, -0.3) {5 из 1};
+  \node[cell, minimum width=16mm, hi2] (q2) at (6.5, -1.5) {3 из 2};
+
+  % Результат
+  \node[lbl, anchor=east] at (-0.7, -3.4) {результат};
+  \foreach \v [count=\i from 0] in {0, 1, 2} {
+    \node[cell] at (\i, -3.4) {\v};
+  }
+  \node[cell, hi2] (r3) at (3, -3.4) {3};
+  \draw[arracc] (q2) |- (r3);
+  \node[lbl, anchor=west, align=left] at (6.9, -2.6)
+    {pop() отдаёт 3 из списка 2;\\на его место в очередь\\встаёт 6 из того же списка};
+
+\end{tikzpicture}

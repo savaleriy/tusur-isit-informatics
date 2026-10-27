@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=10mm, y=11mm]
+
+  \foreach \i in {0, ..., 9} {
+    \node[lbl] (i\i) at (\i, 0.65) {\i};
+    \node[cell] (k\i) at (\i, 0) {};
+  }
+
+  % Пары ключ: значение
+  \node[cell, minimum width=15mm] (p3) at (3, -1.2) {3: 300};
+  \node[cell, minimum width=15mm, hi] (p13) at (3, -2.3) {13: 130};
+  \node[cell, minimum width=15mm] (p7) at (7, -1.2) {7: 700};
+  \draw[arr] (k3) -- (p3);
+  \draw[arr] (p3) -- (p13);
+  \draw[arr] (k7) -- (p7);
+
+  % Путь get(13)
+  \node[box, text=accent, draw=accent] (q) at (3, 1.75) {get(13)};
+  \draw[arracc] (q) -- (i3);
+  \node[lbl, anchor=west, align=left, text=accent] at (4.1, -2.65)
+    {1) $13 \bmod 10 = 3$: идём в кармашек 3\\
+     2) ключ 3 не равен 13: дальше по цепочке\\
+     3) ключ 13 найден: вернуть 130};
+  \node[lbl, anchor=west, align=left] at (-0.5, -3.9)
+    {остальные девять кармашков при поиске не просматриваются;\\
+     put(3, 333) найдёт пару с ключом 3 и заменит в ней значение - новой пары не будет};
+
+\end{tikzpicture}

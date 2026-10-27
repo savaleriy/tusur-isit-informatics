@@ -1,0 +1,27 @@
+\begin{tikzpicture}[x=10mm, y=11mm]
+
+  % Кармашки 0..9, цепочки растут вниз
+  \foreach \p/\y in {1/0, 2/-3.6} {
+    \foreach \i in {0, ..., 9} {
+      \node[lbl] at (\i, \y + 0.65) {\i};
+      \node[cell] (k\p\i) at (\i, \y) {};
+    }
+  }
+
+  % 1. add(10), add(20): коллизия в кармашке 0
+  \node[lbl, anchor=east] at (-0.7, 0) {add(10), add(20)};
+  \node[cell, hi] (a10) at (0, -1.1) {10};
+  \node[cell, hi2] (a20) at (0, -2.2) {20};
+  \draw[arr] (k10) -- (a10);
+  \draw[arr] (a10) -- (a20);
+  \node[lbl, anchor=west, align=left] at (1.0, -1.65)
+    {$10 \bmod 10 = 0$ и $20 \bmod 10 = 0$:\\коллизия, 20 дописывается в цепочку кармашка 0;\\повторный add(20) находит 20 в цепочке и ничего не меняет};
+
+  % 2. remove(10)
+  \node[lbl, anchor=east] at (-0.7, -3.6) {remove(10)};
+  \node[cell, hi2] (b20) at (0, -4.7) {20};
+  \draw[arr] (k20) -- (b20);
+  \node[lbl, anchor=west, align=left] at (1.0, -4.7)
+    {ищем только в кармашке 0, остальные девять не трогаем};
+
+\end{tikzpicture}

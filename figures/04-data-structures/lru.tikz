@@ -1,0 +1,38 @@
+\begin{tikzpicture}[x=14mm, y=12mm]
+
+  % Состояние: put(1), put(2), get(1) - порядок от старого к свежему: 2, 1
+  \node[lbl, anchor=west] at (-0.5, 1.8) {после put(1, 1), put(2, 2), get(1); ёмкость 2};
+  \node[lbl, anchor=east] at (0.5, 0.95) {словарь:};
+  \node[cell] (d2) at (2.2, 0.95) {2};
+  \node[cell] (d1) at (3.4, 0.95) {1};
+  \node[box] (h1) at (1, 0) {старый};
+  \node[cell] (n2) at (2.2, 0) {2: 2};
+  \node[cell, hi] (n1) at (3.4, 0) {1: 1};
+  \node[box] (t1) at (4.6, 0) {свежий};
+  \draw[<->] (h1) -- (n2);
+  \draw[<->] (n2) -- (n1);
+  \draw[<->] (n1) -- (t1);
+  \draw[arrmuted] (d2) -- (n2);
+  \draw[arrmuted] (d1) -- (n1);
+  \node[lbl, anchor=west, align=left] at (5.3, 0)
+    {get(1) нашёл узел через словарь,\\вынул его и перенёс в конец: $O(1)$};
+
+  % put(3, 3): вытесняется самый старый
+  \node[lbl, anchor=west] at (-0.5, -1.1) {put(3, 3): места нет, вытесняем старейший};
+  \node[lbl, anchor=east] at (0.5, -1.95) {словарь:};
+  \node[cell] (e1) at (2.2, -1.95) {1};
+  \node[cell] (e3) at (3.4, -1.95) {3};
+  \node[box] (h2) at (1, -2.9) {старый};
+  \node[cell] (m1) at (2.2, -2.9) {1: 1};
+  \node[cell, hi2] (m3) at (3.4, -2.9) {3: 3};
+  \node[box] (t2) at (4.6, -2.9) {свежий};
+  \node[ghost] (g2) at (1.6, -3.85) {2: 2};
+  \draw[<->] (h2) -- (m1);
+  \draw[<->] (m1) -- (m3);
+  \draw[<->] (m3) -- (t2);
+  \draw[arrmuted] (e1) -- (m1);
+  \draw[arrmuted] (e3) -- (m3);
+  \node[lbl, anchor=west, align=left] at (5.3, -2.9)
+    {узел 2 стоял первым:\\убран из списка, ключ 2 - из словаря};
+
+\end{tikzpicture}
