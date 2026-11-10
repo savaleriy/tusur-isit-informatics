@@ -1,0 +1,23 @@
+\begin{tikzpicture}[x=18mm, y=16mm,
+  vnode/.style={circle, draw=fg, fill=boxfill, text=fg, inner sep=1pt, minimum size=8mm},
+  start/.style={circle, draw=accent, fill=accent!22!mixbg, text=fg, line width=1.2pt, inner sep=1pt, minimum size=8mm}]
+
+  \node[start] (A) at (0, 1.5) {A};
+  \node[vnode] (B) at (-1.6, 0.5) {B};
+  \node[vnode] (C) at (1.6, 0.5) {C};
+  \node[vnode] (D) at (-2.4, -0.8) {D};
+  \node[vnode] (E) at (-0.8, -0.8) {E};
+  \node[vnode] (F) at (0.8, -0.8) {F};
+
+  \draw[wire] (A) -- (B);
+  \draw[wire] (A) -- (C);
+  \draw[wire] (B) -- (D);
+  \draw[wire] (B) -- (E);
+  \draw[wire] (C) -- (F);
+  \draw[wire] (E) -- (F);
+
+  \node[lbl, anchor=north west, align=left] at (-2.6, -1.7)
+    {BFS от A: A B C D E F\\[1mm]
+     DFS от A: A B D E F C};
+
+\end{tikzpicture}

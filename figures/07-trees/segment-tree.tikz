@@ -1,0 +1,48 @@
+\begin{tikzpicture}[x=15mm, y=16mm,
+  seg/.style={draw=fg, fill=boxfill, rounded corners=2pt,
+    minimum width=14mm, minimum height=10mm, inner sep=1pt,
+    align=center, font=\scriptsize},
+  hit/.style={draw=accent, fill=accent!22!mixbg, line width=1pt,
+    rounded corners=2pt, minimum width=14mm, minimum height=10mm,
+    inner sep=1pt, align=center, font=\scriptsize},
+  leafbox/.style={draw=fg, fill=boxfill, minimum width=8mm,
+    minimum height=8mm, inner sep=1pt, font=\scriptsize}]
+
+  \node[seg] (root) at (0, 3.6) {[0,5)\\[0.2mm]{\tiny 15}};
+  \node[seg] (l02) at (-2.2, 2.6) {[0,2)\\[0.2mm]{\tiny 7}};
+  \node[seg] (r25) at (2.2, 2.6) {[2,5)\\[0.2mm]{\tiny 8}};
+  \node[seg] (l01) at (-3.2, 1.6) {[0,1)\\[0.2mm]{\tiny 2}};
+  \node[hit] (l12) at (-1.2, 1.6) {[1,2)\\[0.2mm]{\tiny 5}};
+  \node[hit] (r23) at (1.2, 1.6) {[2,3)\\[0.2mm]{\tiny 1}};
+  \node[seg] (r35) at (3.2, 1.6) {[3,5)\\[0.2mm]{\tiny 7}};
+  \node[hit] (r34) at (2.6, 0.6) {[3,4)\\[0.2mm]{\tiny 4}};
+  \node[seg] (r45) at (3.8, 0.6) {[4,5)\\[0.2mm]{\tiny 3}};
+
+  \draw[wire] (root) -- (l02);
+  \draw[wire] (root) -- (r25);
+  \draw[wire] (l02) -- (l01);
+  \draw[wire] (l02) -- (l12);
+  \draw[wire] (r25) -- (r23);
+  \draw[wire] (r25) -- (r35);
+  \draw[wire] (r35) -- (r34);
+  \draw[wire] (r35) -- (r45);
+
+  \node[leafbox] (c0) at (-3.2, -0.6) {2};
+  \node[leafbox] (c1) at (-1.2, -0.6) {5};
+  \node[leafbox] (c2) at (1.2, -0.6) {1};
+  \node[leafbox] (c3) at (2.6, -0.6) {4};
+  \node[leafbox] (c4) at (3.8, -0.6) {3};
+
+  \draw[wire] (l01) -- (c0);
+  \draw[wire] (l12) -- (c1);
+  \draw[wire] (r23) -- (c2);
+  \draw[wire] (r34) -- (c3);
+  \draw[wire] (r45) -- (c4);
+
+  \node[lbl, below=0.5mm of c0] {0};
+  \node[lbl, below=0.5mm of c1] {1};
+  \node[lbl, below=0.5mm of c2] {2};
+  \node[lbl, below=0.5mm of c3] {3};
+  \node[lbl, below=0.5mm of c4] {4};
+
+\end{tikzpicture}

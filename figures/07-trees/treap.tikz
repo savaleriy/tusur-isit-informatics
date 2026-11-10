@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=18mm, y=16mm,
+  treapnode/.style={draw=fg, fill=boxfill, rounded corners=2pt,
+    minimum width=11mm, minimum height=11mm, inner sep=1pt,
+    align=center, font=\scriptsize}]
+
+  \node[treapnode] (n5) at (0, 2.2) {5\\[0.2mm]{\tiny 0.9}};
+  \node[treapnode] (n2) at (-1.8, 1.2) {2\\[0.2mm]{\tiny 0.6}};
+  \node[treapnode] (n8) at (1.8, 1.2) {8\\[0.2mm]{\tiny 0.7}};
+  \node[treapnode] (n1) at (-2.6, 0.2) {1\\[0.2mm]{\tiny 0.3}};
+  \node[treapnode] (n3) at (-1.0, 0.2) {3\\[0.2mm]{\tiny 0.4}};
+  \node[treapnode] (n9) at (2.6, 0.2) {9\\[0.2mm]{\tiny 0.5}};
+
+  \draw[wire] (n5) -- (n2);
+  \draw[wire] (n5) -- (n8);
+  \draw[wire] (n2) -- (n1);
+  \draw[wire] (n2) -- (n3);
+  \draw[wire] (n8) -- (n9);
+
+  \node[lbl, anchor=north west, align=left] at (-3.0, -0.5)
+    {в узле: ключ (сверху),\\ приоритет (снизу)};
+
+\end{tikzpicture}
