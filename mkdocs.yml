@@ -97,7 +97,7 @@ nav:
   - "6. Лабораторная 1: игровой ИИ":
       - "Вариант A: UNO": 06-lab-game/UNO.md
       - "Вариант B: Морской бой": 06-lab-game/Battleship.md
-  - 7. Деревья и сжатие данных:
+  - 7. Графы, деревья и сжатие данных:
       - Конспект: 07-trees/note.md
       - Python: 07-trees/python.md
       - Задачи: 07-trees/task.md
